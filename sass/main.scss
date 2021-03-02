@@ -36,7 +36,7 @@ header{
 #logo-index{
     
     grid-area: logo;
-    width: 200px;
+    width: inherit;
     display: inline;
 }
 
@@ -57,6 +57,7 @@ header{
 
     display: inline;
     grid-area: navbar;
+    text-align: center;
     ul{
         display: inline;
         padding-inline-start: 0;
@@ -88,6 +89,8 @@ header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
+    margin-bottom: 87px;
+    margin-top: -20px;
 }
 
 .container-profile{
@@ -155,3 +158,11 @@ header{
     }
 }
 
+
+
+
+
+
+
+@import './Themes/tablet-resolution';
+@import "./Themes/mobile-resolution";

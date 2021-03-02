@@ -1,0 +1,14 @@
+@media screen and (max-width: 600px)// mobile
+{
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+
+    header a {
+        width: 150px;
+    }
+
+    .title{
+        font-size: 14px ;
+    }
+}

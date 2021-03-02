@@ -1,0 +1,27 @@
+@media screen and (max-width: 850px) // tablette
+{
+
+  header{
+      grid-template-areas:
+      "logo title title title " 
+      "navbar navbar navbar navbar";
+  }
+    .main-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .title{
+        justify-self: end;
+    }
+
+    .navigation-bar{
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+}
