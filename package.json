@@ -1,0 +1,20 @@
+{
+  "name": "fannydevilliers_6_28022021",
+  "version": "1.0.0",
+  "description": "FishEye",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fa-dede/FannyDevilliers_6_28022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fa-dede/FannyDevilliers_6_28022021/issues"
+  },
+  "homepage": "https://github.com/Fa-dede/FannyDevilliers_6_28022021#readme"
+}
