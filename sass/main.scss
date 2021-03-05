@@ -2,6 +2,7 @@
 @import "./Themes/typography";
 @import "./Utils/mixins";
 @import "./Themes/photographer-page";
+@import "./Composants/components";
 
 // *{
 //     border: 1px solid grey;
@@ -150,17 +151,6 @@ header{
             padding-inline-start: unset;
             margin: unset;
             margin-top: 8px;
-        }
-        .tags{
-            display: inline;
-            color: $primary-color;
-            font-size: 9px;
-            font-weight: 500;
-            border: solid .5px $tags-border-color;
-            border-radius: 11px;
-            padding: 3px 7px 3px 7px;
-            margin-right: 5px;
-            cursor: pointer; 
         }
     }
 }

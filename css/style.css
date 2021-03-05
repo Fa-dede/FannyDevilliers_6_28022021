@@ -77,13 +77,41 @@
 .popularity-button .fas {
   margin-left: 26px;
 }
+.popularity-button__opened {
+  position: absolute;
+}
+.popularity-button__opened ul {
+  margin: unset;
+  padding: unset;
+}
+.popularity-button__opened .category {
+  display: block;
+  text-align: left;
+}
+.popularity-button__opened .category-1st {
+  padding: 2px 0 14px 9px;
+}
+.popularity-button__opened .category-2nd {
+  padding: 14px 0 14px 9px;
+}
+.popularity-button__opened .category-3rd {
+  padding: 14px 0 0 9px;
+}
+.popularity-button__opened .category-2nd, .popularity-button__opened .category-3rd {
+  border-top: solid 1px white;
+}
+
+.portfolio {
+  width: 100%;
+}
 
 .portfolio--photo-container {
   margin-left: 100px;
   margin-right: 80px;
+  padding-bottom: 150px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 71px 5px;
+  gap: 71px 20px;
 }
 
 .photo {
@@ -122,6 +150,23 @@
 }
 .static-insert .total-likes {
   margin-right: 67px;
+}
+
+.tags {
+  display: inline;
+  color: #901C1C;
+  font-size: 9px;
+  font-weight: 500;
+  border: solid 0.5px #C4C4C4;
+  border-radius: 11px;
+  padding: 3px 7px 3px 7px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tags:hover {
+  background-color: #901C1C;
+  color: white;
 }
 
 body {
@@ -256,17 +301,6 @@ header a {
   padding-inline-start: unset;
   margin: unset;
   margin-top: 8px;
-}
-.container-profile__tags .tags {
-  display: inline;
-  color: #901C1C;
-  font-size: 9px;
-  font-weight: 500;
-  border: solid 0.5px #C4C4C4;
-  border-radius: 11px;
-  padding: 3px 7px 3px 7px;
-  margin-right: 5px;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {

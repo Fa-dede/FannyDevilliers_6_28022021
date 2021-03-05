@@ -83,18 +83,48 @@
     .fas{
         margin-left: 26px;
     }
+    &__opened{
+        position: absolute;
+        ul{
+            margin: unset;
+            padding:unset;
+        }
+        // display: none;
+        .category{
+            display: block;
+            text-align: left;
+        }
+        .category-1st{
+            padding: 2px 0 14px 9px;
+        }
+        .category-2nd{
+            padding: 14px 0 14px 9px;
+        }
+        .category-3rd{
+            padding : 14px 0 0 9px;
+        }
+        .category-2nd, .category-3rd{
+            border-top: solid 1px white;
+
+        }
+    }
 }
 
-           
+
+.portfolio{
+    width: 100%;
+}         
 
 .portfolio--photo-container{
     margin-left: 100px;
     margin-right: 80px;
+    padding-bottom: 150px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     // grid-template-rows: repeat(2,1fr);
-    gap: 71px 5px;
+    gap: 71px 20px;
 }
+
 
 .photo{
     margin: unset;
