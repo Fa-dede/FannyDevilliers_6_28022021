@@ -1,166 +1,168 @@
-
-.header-pages{
-    display: block;
-    padding:unset;
-    margin: 43px 0 40px 100px ;
+.header-pages {
+  display: block;
+  padding: unset;
+  margin: 43px 0 40px 100px;
 }
 
-.profile-insert{
-    background-color: $insert-profile-background-color;
-    border-radius: 5px;
-    display: grid;
-    justify-items: start;
-    grid-template-columns: auto 1fr auto 1fr 1fr;
-    padding-top: 56px;
-    padding-left: 50px;
-    padding-bottom: 56px;
-    padding-right: 50px;
-    margin : 0 100px 0 100px;
+.profile-insert {
+  background-color: $insert-profile-background-color;
+  border-radius: 5px;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: auto 1fr auto 1fr 1fr;
+  padding-top: 56px;
+  padding-left: 50px;
+  padding-bottom: 56px;
+  padding-right: 50px;
+  margin: 0 100px 0 100px;
 
-
-    .information-container{
-        grid-column: 1/2;
-        grid-row: 1;
+  .information-container {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+  .container-profile {
+    &__picture {
+      // display: none;
+      grid-column: 5;
+      margin: unset;
     }
-    .container-profile{
-        &__picture{
-            // display: none;
-            grid-column: 5;
-            margin: unset;
-        }
-        &__name{
-            margin-bottom: 20px;
-            font-size: 64px;
-        }
-        &__information{
-            margin-bottom: 20px;
-            .location{
-                font-size: 24px;
-            }
-            .quote{
-                margin-top: 19px;
-                font-size: 18px;
-            }
-        }
-        &__tags .tags{
-            font-size: 18px;
-            border-radius: 12px;
-        }
-        &__button{
-            grid-column: 3;
-            grid-row: 1;
-            align-self: start;
-            color: white;
-            padding: 21px 11px;
-            font-weight: 700;
-            font-size: 20px;
-            background-color: $primary-color;
-            border-style: unset;
-            border-radius: 5px;
-            cursor: pointer;
-            
-
-        }
+    &__name {
+      margin-bottom: 20px;
+      font-size: 64px;
     }
-}
-
-.sort-by{
-    margin: 20px 0 58px 100px;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.popularity-button{
-    color: white;
-    padding: 21px 11px;
-    font-weight: 700;
-    font-size: 18px;
-    background-color: $primary-color;
-    border-style: unset;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 13px;
-    .fas{
-        margin-left: 26px;
-    }
-    &__opened{
-        position: absolute;
-        ul{
-            margin: unset;
-            padding:unset;
-        }
-        // display: none;
-        .category{
-            display: block;
-            text-align: left;
-        }
-        .category-1st{
-            padding: 2px 0 14px 9px;
-        }
-        .category-2nd{
-            padding: 14px 0 14px 9px;
-        }
-        .category-3rd{
-            padding : 14px 0 0 9px;
-        }
-        .category-2nd, .category-3rd{
-            border-top: solid 1px white;
-
-        }
-    }
-}
-
-
-.portfolio{
-    width: 100%;
-}         
-
-.portfolio--photo-container{
-    margin-left: 100px;
-    margin-right: 80px;
-    padding-bottom: 150px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    // grid-template-rows: repeat(2,1fr);
-    gap: 71px 20px;
-}
-
-
-.photo{
-    margin: unset;
-    width: 350px;
-    height: 300px;
-    &-picture{
-       width: inherit;
-       height: inherit;
-       object-fit: cover;
-       border-radius: 5px;
-    }
-    &-footer{
-        margin-top: 10px;
+    &__information {
+      margin-bottom: 20px;
+      .location {
         font-size: 24px;
-        color: $primary-color;
-        &__likes{
-            float: right;
-            margin-left: 20px;
-        }
-        &__price{
-            float: right;
-        }       
+      }
+      .quote {
+        margin-top: 19px;
+        font-size: 18px;
+      }
     }
+    &__tags .tags {
+      font-size: 18px;
+      border-radius: 12px;
+    }
+    &__button {
+      grid-column: 3;
+      grid-row: 1;
+      align-self: start;
+      color: white;
+      padding: 21px 11px;
+      font-weight: 700;
+      font-size: 20px;
+      background-color: $primary-color;
+      border-style: unset;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
 }
 
-.static-insert{
-    position: fixed;
-    bottom: 0;
-    right: 36px;
-    font-size: 24px;
-    font-weight: 500;
-    background-color: $scroll-top-button-background;
-    padding: 21px 34px;
-    border-radius: 5px 5px 0 0;
-    .total-likes{
-        margin-right: 67px;
-    }
+.sort-by {
+  margin: 20px 0 58px 100px;
+  font-weight: 700;
+  font-size: 18px;
+}
 
+.popularity-button {
+  color: white;
+  padding: 21px 11px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: $primary-color;
+  border-style: unset;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 13px;
+  .fas {
+    margin-left: 26px;
+  }
+  &__opened {
+    position: absolute;
+    ul {
+      margin: unset;
+      padding: unset;
+    }
+    // display: none;
+    .category {
+      display: block;
+      text-align: left;
+    }
+    .category-1st {
+      padding: 2px 0 14px 9px;
+    }
+    .category-2nd {
+      padding: 14px 0 14px 9px;
+    }
+    .category-3rd {
+      padding: 14px 0 0 9px;
+    }
+    .category-2nd,
+    .category-3rd {
+      border-top: solid 1px white;
+    }
+  }
+}
+
+.portfolio {
+  width: 100%;
+}
+
+.portfolio--photo-container {
+  margin-left: 100px;
+  margin-right: 80px;
+  padding-bottom: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(2,1fr);
+  gap: 71px 20px;
+}
+
+.photo {
+  margin: unset;
+  width: 350px;
+  height: 300px;
+  &-picture {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  &-footer {
+    margin-top: 10px;
+    font-size: 24px;
+    color: $primary-color;
+    &__likes {
+      float: right;
+      margin-left: 20px;
+    }
+    &__price {
+      float: right;
+    }
+  }
+}
+
+#output {
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+  img {
+    width: inherit;
+  }
+}
+
+.static-insert {
+  position: fixed;
+  bottom: 0;
+  right: 36px;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: $scroll-top-button-background;
+  padding: 21px 34px;
+  border-radius: 5px 5px 0 0;
+  .total-likes {
+    margin-right: 67px;
+  }
 }

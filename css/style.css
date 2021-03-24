@@ -97,7 +97,8 @@
 .popularity-button__opened .category-3rd {
   padding: 14px 0 0 9px;
 }
-.popularity-button__opened .category-2nd, .popularity-button__opened .category-3rd {
+.popularity-button__opened .category-2nd,
+.popularity-button__opened .category-3rd {
   border-top: solid 1px white;
 }
 
@@ -136,6 +137,15 @@
 }
 .photo-footer__price {
   float: right;
+}
+
+#output {
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+}
+#output img {
+  width: inherit;
 }
 
 .static-insert {
