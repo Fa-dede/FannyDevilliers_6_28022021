@@ -81,6 +81,7 @@
   }
   &__opened {
     position: absolute;
+    display: none;
     ul {
       margin: unset;
       padding: unset;
@@ -137,6 +138,7 @@
     &__likes {
       float: right;
       margin-left: 20px;
+      cursor: pointer;
     }
     &__price {
       float: right;

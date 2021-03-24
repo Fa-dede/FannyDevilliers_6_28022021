@@ -25,12 +25,22 @@ fetch("./datas.json")
 
     //isolate media with the photographerId
 
+    const likesArray = [];
+
+    const addALike = () => {
+      totalNumOfLikes++;
+    };
+
     for (let i = 0; i < datas.media.length; i++) {
       const photographerId = datas.media[i].photographerId;
       let numOfId = 243;
       if (photographerId == numOfId) {
         const indexMedia = datas.media[i];
-        console.log(indexMedia);
+        // console.log(indexMedia);
+
+        //Nombre total de Likes
+        const likes = indexMedia.likes;
+        likesArray.push(likes); // ajoute les likes dans le tableau likesArray[]
 
         //Photographs
         document.querySelector("#portfolio").innerHTML += `
@@ -43,11 +53,52 @@ fetch("./datas.json")
           <footer class="photo-footer">
             <span class="photo-footer__title">${indexMedia.title}</span>
             <span class="photo-footer__likes"
-              >${indexMedia.likes} <i class="fas fa-heart"></i
+              >${indexMedia.likes} <i class="heart far fa-heart"></i
             ></span>
             <span class="photo-footer__price">${indexMedia.price} €</span>
           </footer>
         </figure>`;
+
+        // console.log(arrayLikes.reduce(reducer));
       }
     }
+
+    // static insert
+    const reducer = (acc, currentVal) => acc + currentVal;
+
+    const totalNumOfLikes = likesArray.reduce(reducer);
+
+    let pricePerDay = photographer.price;
+
+    document.querySelector(".static-insert").innerHTML = `
+      <span class="total-likes">${totalNumOfLikes} <i class="fas fa-heart"></i></span>
+      <span>${pricePerDay}€ / jour</span>
+    `;
   });
+
+// Open Menu Filter
+
+const filterButton = document.getElementById("button-filter");
+const filterButtonOpened = document.getElementById("button-filter-opened");
+
+// function openMenu() {
+//   filterButton.style.display = "none";
+//   filterButtonOpened.style.display = "unset";
+//   event.preventDefault;
+// }
+
+const openMenu = () => {
+  filterButton.style.display = "none";
+  filterButtonOpened.style.display = "unset";
+  event.addEventListener;
+};
+
+const closeMenu = () => {
+  filterButtonOpened.style.display = "none";
+  filterButton.style.display = "unset";
+};
+
+filterButton.addEventListener("mouseover", openMenu);
+filterButtonOpened.addEventListener("mouseleave", closeMenu);
+
+// Close Menu Filter
