@@ -27,19 +27,14 @@ fetch("./datas.json")
 
     const likesArray = [];
 
-    const addALike = () => {
-      totalNumOfLikes++;
-    };
-
     for (let i = 0; i < datas.media.length; i++) {
       const photographerId = datas.media[i].photographerId;
       let numOfId = 243;
       if (photographerId == numOfId) {
         const indexMedia = datas.media[i];
-        // console.log(indexMedia);
 
-        //Nombre total de Likes
-        const likes = indexMedia.likes;
+        //Total Number of Likes
+        let likes = indexMedia.likes;
         likesArray.push(likes); // ajoute les likes dans le tableau likesArray[]
 
         //Photographs
@@ -53,13 +48,45 @@ fetch("./datas.json")
           <footer class="photo-footer">
             <span class="photo-footer__title">${indexMedia.title}</span>
             <span class="photo-footer__likes"
-              >${indexMedia.likes} <i class="heart far fa-heart"></i
+              >${indexMedia.likes} <i class="hearts far fa-heart"></i
             ></span>
             <span class="photo-footer__price">${indexMedia.price} €</span>
           </footer>
         </figure>`;
 
-        // console.log(arrayLikes.reduce(reducer));
+        //Add as Favorite
+
+        const heartArray = document.getElementsByClassName("hearts");
+        console.log(likes);
+
+        for (j = 0; j < heartArray.length; j++) {
+          // console.log(heartArray[i]);
+          const heartIndex = heartArray[j];
+          let addedToFavorite = false;
+
+          const fillHeart = () => {
+            if (!addedToFavorite) {
+              heartIndex.style.fontWeight = "bold";
+              addedToFavorite = true;
+              console.log(addedToFavorite);
+            } else {
+              heartIndex.style.fontWeight = "normal";
+              addedToFavorite = false;
+              console.log(addedToFavorite);
+            }
+          };
+
+          const addaLike = () => {
+            if (addedToFavorite) {
+              likes++;
+              console.log(likes);
+            } else {
+              likes--;
+            }
+          };
+
+          heartIndex.addEventListener("click", fillHeart);
+        }
       }
     }
 
@@ -76,16 +103,10 @@ fetch("./datas.json")
     `;
   });
 
-// Open Menu Filter
+// Open/Close Menu Filter
 
 const filterButton = document.getElementById("button-filter");
 const filterButtonOpened = document.getElementById("button-filter-opened");
-
-// function openMenu() {
-//   filterButton.style.display = "none";
-//   filterButtonOpened.style.display = "unset";
-//   event.preventDefault;
-// }
 
 const openMenu = () => {
   filterButton.style.display = "none";
@@ -96,9 +117,8 @@ const openMenu = () => {
 const closeMenu = () => {
   filterButtonOpened.style.display = "none";
   filterButton.style.display = "unset";
+  event.addEventListener;
 };
 
 filterButton.addEventListener("mouseover", openMenu);
 filterButtonOpened.addEventListener("mouseleave", closeMenu);
-
-// Close Menu Filter
