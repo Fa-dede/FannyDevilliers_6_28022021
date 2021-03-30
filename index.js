@@ -26,11 +26,15 @@ fetch("datas.json")
         <h5 class="prices">${photographer.price} € / jour</h5>
       </div>
 
-      <ul class='tag-list'>
-      <li class="tags">${photographer.tags.join(",")}</li>
+      <ul id='tag-list'>
+  
       </ul>
     </article>`;
 
-      console.log(photographer.tags.join(","));
+      photographer.tags.forEach((tag) => {
+        document.getElementById(
+          "tag-list"
+        ).innerHTML += `<li class="tags">${tag}</li> `;
+      });
     });
   });
