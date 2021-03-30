@@ -1,13 +1,6 @@
 // const Photographer = require("./PhotographersDatas");
 // const firstPhotographer = new Photographer();
 
-function addition(param1, param2) {
-  return param1 + param2;
-}
-
-const resultat = addition(1, 2);
-// console.log(resultat);
-
 // async function init(idPhotographer) {
 //   const photographer = await fetch("./datas.json")
 //     .then((response) => response.json())
@@ -30,7 +23,7 @@ if (!idPhotographer) {
   //si erreur redirection vers une page annexe
   window.location.href = "./index.html";
 }
-// console.log(idPhotographer);
+console.log(idPhotographer);
 
 //init(idPhotographer);
 
