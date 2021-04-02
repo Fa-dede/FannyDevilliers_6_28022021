@@ -8,7 +8,7 @@ fetch("datas.json")
       let arrayTags = photographer.tags; // tableaux des tags des photographes
       let tag = arrayTags.map((tag) => `<li class ='tags'> ${tag} </li>`); // méthode qui permet d'isoler les éléments du tableau + de les incrémenter entre deux balises <li>
       let tags = `<ul class='tag-list'> ${tag.join("")} </ul>`;
-      // méthode.join qui incrémente mes <li> dans une <ul>
+      // méthode.join('') qui incrémente mes <li> dans une <ul>
 
       let mainContainer = document.querySelector(".main-container");
       mainContainer.innerHTML += `
