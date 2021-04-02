@@ -40,6 +40,7 @@ export async function init(idPhotographer) {
       //Boucle2 : boucle les médias
       datas.media.forEach((media) => {
         // condition 2.1 qui filtre les médias si la valeur PhotographerId = à mon paramètre idPhotographer
+
         if (media.photographerId == idPhotographer) {
           document.querySelector("#portfolio").innerHTML += `
             <figure class="photo">
@@ -57,9 +58,28 @@ export async function init(idPhotographer) {
                 <span class="photo-footer__price">${media.price} €</span>
                 </footer>
             </figure>`;
+
           totalNumberOfLikesArray.push(media.likes);
         } //Fin de ma condition 2.1 : if (media.photographerId == idPhotographer)
       }); //Fin de Boucle 2 : datas.media.forEach()
+
+      //Clic sur les photos pour faire apparaitre la lightbox
+
+      let picturesArray = document.getElementsByClassName("photo-picture");
+      for (let i = 0; i < picturesArray.length; i++) {
+        picturesArray[i].addEventListener("click", (e) => {
+          ligthbox.style.display = "flex";
+          let img = document.createElement("img");
+          img.id = "image-clicked";
+          img.src = picturesArray[i].src;
+          while (ligthbox.firstChild) {
+            ligthbox.removeChild(ligthbox.firstChild);
+          }
+          ligthbox.appendChild(img);
+        });
+      }
+
+      console.log(picturesArray);
 
       //Décompte des likes dans encart de bas de page
 
@@ -77,6 +97,7 @@ export async function init(idPhotographer) {
         let addedToFavorite = false; // doit se trouver dans la boucle des coeurs
 
         // fonction qui remplit/vide le coeur et incrémente/décrémente les likes (Possibilité de stocker la fonction dans un fichier js à part )
+
         const fillHeart = (event) => {
           let selectedHeart = event.target;
           let selectedFooterLike = selectedHeart.parentNode;
@@ -110,4 +131,13 @@ export async function init(idPhotographer) {
     }); //Fin du 2eme .then()
 } //Fin de la function asynchrone init()
 
-init(82);
+init(243);
+
+let ligthbox = document.createElement("div");
+ligthbox.id = "ligthbox";
+document.body.appendChild(ligthbox);
+ligthbox.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    return (ligthbox.style.display = "none");
+  }
+});

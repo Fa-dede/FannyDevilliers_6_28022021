@@ -1,3 +1,6 @@
+body {
+  margin-left: unset;
+}
 .header-pages {
   display: block;
   padding: unset;
@@ -130,6 +133,7 @@
     height: inherit;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
   }
   &-footer {
     margin-top: 10px;
@@ -167,4 +171,20 @@
   .total-likes {
     margin-right: 67px;
   }
+}
+
+#ligthbox {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-clicked {
+  width: 40%;
 }
