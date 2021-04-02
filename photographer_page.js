@@ -61,38 +61,52 @@ export async function init(idPhotographer) {
         } //Fin de ma condition 2.1 : if (media.photographerId == idPhotographer)
       }); //Fin de Boucle 2 : datas.media.forEach()
 
-      //Ajouter en favoris
-      let addedToFavorite = false;
-      for (let h = 0; h < heartArray.length; h++) {
-        const fillHeart = (event) => {
-          let selectedHeart = event.target;
-          let selectedFooterLike = selectedHeart.parentNode;
-          let selectedHeartCount = selectedFooterLike.querySelector(
-            ".heart-txt"
-          );
-          if (!addedToFavorite) {
-            addedToFavorite = true;
-            console.log(addedToFavorite);
-            selectedHeartCount.innerHTML =
-              parseInt(selectedHeartCount.innerHTML, 10) + 1;
-            heartArray[h].style.fontWeight = "bold";
-          } else {
-            addedToFavorite = false;
-            console.log(addedToFavorite);
-            selectedHeartCount.innerHTML =
-              parseInt(selectedHeartCount.innerHTML, 10) - 1;
-            heartArray[h].style.fontWeight = "400";
-          }
-        };
-
-        heartArray[h].addEventListener("click", fillHeart);
-      }
+      //Décompte des likes dans encart de bas de page
 
       const reducer = (acc, currentVal) => acc + currentVal;
       let likesPerPage = totalNumberOfLikesArray.reduce(reducer);
       document.querySelector(
         ".total-likes"
       ).innerHTML = `${likesPerPage} <i class="fas fa-heart"></i>`;
+
+      //Ajouter en favoris
+
+      //Boucle 3 : pour atteindre chaque coeur
+
+      for (let h = 0; h < heartArray.length; h++) {
+        let addedToFavorite = false; // doit se trouver dans la boucle des coeurs
+
+        // fonction qui remplit/vide le coeur et incrémente/décrémente les likes (Possibilité de stocker la fonction dans un fichier js à part )
+        const fillHeart = (event) => {
+          let selectedHeart = event.target;
+          let selectedFooterLike = selectedHeart.parentNode;
+          let selectedHeartCount = selectedFooterLike.querySelector(
+            ".heart-txt"
+          );
+
+          if (!addedToFavorite) {
+            addedToFavorite = true;
+            // console.log("ajouté en favoris");
+            selectedHeartCount.innerHTML =
+              parseInt(selectedHeartCount.innerHTML, 10) + 1;
+            heartArray[h].style.fontWeight = "bold";
+            likesPerPage++;
+          } else {
+            addedToFavorite = false;
+            // console.log("retiré de la liste de favoris");
+            selectedHeartCount.innerHTML =
+              parseInt(selectedHeartCount.innerHTML, 10) - 1;
+            heartArray[h].style.fontWeight = "400";
+            likesPerPage--;
+          }
+          // Mise à jour du décompte de like en bas de page
+          document.querySelector(
+            ".total-likes"
+          ).innerHTML = `${likesPerPage} <i class="fas fa-heart"></i>`;
+        };
+
+        heartArray[h].addEventListener("click", fillHeart);
+      }
     }); //Fin du 2eme .then()
 } //Fin de la function asynchrone init()
 
