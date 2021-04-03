@@ -131,7 +131,7 @@ export async function init(idPhotographer) {
     }); //Fin du 2eme .then()
 } //Fin de la function asynchrone init()
 
-init(243);
+init(82);
 
 let ligthbox = document.createElement("div");
 ligthbox.id = "ligthbox";
@@ -139,5 +139,25 @@ document.body.appendChild(ligthbox);
 ligthbox.addEventListener("click", (e) => {
   if (e.target === e.currentTarget) {
     return (ligthbox.style.display = "none");
+  }
+});
+
+// Ouverture de la modale de contact
+
+let contact = document.querySelector("#contact");
+console.log(contact);
+contact.addEventListener("click", (e) => {
+  document.getElementById("container-modale").style.display = "flex";
+});
+
+// Fermeture de la modale de contact
+let contactContainer = document.getElementById("container-modale");
+document.getElementById("cross-close").addEventListener("click", (e) => {
+  contactContainer.style.display = "none";
+});
+
+contactContainer.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    return (contactContainer.style.display = "none");
   }
 });
