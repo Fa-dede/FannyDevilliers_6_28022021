@@ -14,80 +14,76 @@
     <title class="photographer-name-title">Photographe X</title>
   </head>
   <body>
-        <!-- Modale de contact -->
-        <div id="container-modale">
-          <div id="modale">
-            <img id='cross-close' src="./img/cross-close.svg" alt="cross-close">
-            <h1 class="title-contact">Contactez-moi</h1>
-            <h2 class="title-contact photographer-name">Mimi Keel</h2>
-            <form
-            id="modal-form"
-              name="contact"
-              action="photographer-page.html"
-              method="get"
-              onsubmit="return validate()"
-              novalidate
-            >
-              <div
-                class="form-data">
-                <label for="first">Prénom</label>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="first"
-                  name="first"
-                  minlength="2"
-                  required
-                />
-                <span class="error" id="error-first-name"></span>
-              </div>
-              <div
-                class="form-data">
-                <label for="last">Nom</label>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="last"
-                  name="last"
-                  minlength="2"
-                  required 
-                />
-                <span class="error" id="error-last-name"></span>
-              </div>
-              <div
-                class="form-data">
-                <label for="email">Email</label>
-                <input
-                  class="text-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                  minlength="2"
-                  required 
-                />
-                <span class="error" id="error-last-name"></span>
-              </div>
-              <div
-                class="form-data">
-                <label for="last">Votre message</label>
-                <textarea
-                  class="text-control"
-                  type="text"
-                  id="last"
-                  name="last"
-                  minlength="2"
-                  required 
-                ></textarea>
-                <span class="error" id="error-last-name"></span>
-              </div>
-              <input
-              id="submit"
-              class="btn-submit button"
-              type="submit"
-              value="Envoyer"
+    <!-- Modale de contact -->
+    <div id="container-modale">
+      <div id="modale">
+        <img id="cross-close" src="./img/cross-close.svg" alt="cross-close" />
+        <h1 class="title-contact">Contactez-moi</h1>
+        <h2 class="title-contact photographer-name"></h2>
+        <form
+          id="modal-form"
+          name="contact"
+          action="photographer-page.html"
+          method="GET"
+          onsubmit="return validate()"
+        >
+          <div id="input-first" class="form-data">
+            <label for="first">Prénom</label>
+            <input
+              class="text-control"
+              type="text"
+              id="first"
+              name="first"
+              minlength="2"
+              required
             />
+            <span class="error" id="error-first-name"></span>
           </div>
-        </div>
+          <div class="form-data">
+            <label for="last">Nom</label>
+            <input
+              class="text-control"
+              type="text"
+              id="last"
+              name="last"
+              minlength="2"
+              required
+            />
+            <span class="error" id="error-last-name"></span>
+          </div>
+          <div class="form-data">
+            <label for="email">Email</label>
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              name="email"
+              minlength="2"
+              required
+            />
+            <span class="error" id="error-email"></span>
+          </div>
+          <div class="form-data">
+            <label for="message">Votre message</label>
+            <textarea
+              class="text-control"
+              type="text"
+              id="message"
+              name="message"
+              minlength="2"
+              required
+            ></textarea>
+            <span class="error" id="error-message"></span>
+          </div>
+          <input
+            id="submit"
+            class="btn-submit button"
+            type="submit"
+            value="Envoyer"
+          />
+        </form>
+      </div>
+    </div>
     <header class="header-pages">
       <a href="./index.html">
         <img
@@ -112,7 +108,7 @@
           </div>
         </div>
 
-        <span id="contact"class="container-profile__button">Engagez-moi</span>
+        <span id="contact" class="container-profile__button">Engagez-moi</span>
         <div id="container-portrait" class="container-profile__picture"></div>
 
         <!-- <img id="portrait" class="container-profile__picture" /> -->
@@ -121,7 +117,9 @@
         <div class="sort-by">
           <span>Triez-par</span>
           <button id="button-filter" class="popularity-button">
-            Popularité <i class="fas fa-chevron-down"></i>
+            <span id="selected-filter"
+              >Popularité <i class="fas fa-chevron-down"></i
+            ></span>
           </button>
           <button
             id="button-filter-opened"
@@ -144,6 +142,6 @@
       </main>
     </main>
 
-    <script src="photographer_page.js" type="module" defer></script>
+    <script src="photographer_page.js" type="module"></script>
   </body>
 </html>

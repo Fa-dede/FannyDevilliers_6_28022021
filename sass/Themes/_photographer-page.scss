@@ -249,7 +249,8 @@ body {
     margin-bottom: 10px;
     font-family: "DM SANS";
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
+    font-size: 20px;
   }
   & textarea {
     min-height: 150px;
@@ -264,4 +265,9 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+.error {
+  position: relative;
+  bottom: 8px;
 }

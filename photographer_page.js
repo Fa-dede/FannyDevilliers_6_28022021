@@ -1,4 +1,4 @@
-export async function init(idPhotographer) {
+const init = async (idPhotographer) => {
   const photographer = await fetch("./datas.json")
     .then((response) => response.json())
     .then((datas) => {
@@ -13,6 +13,10 @@ export async function init(idPhotographer) {
         // Condition1 : si l'id du photographe est le même que l'id passé en paramètre de la function init()
 
         if (photographer.id === idPhotographer) {
+          //Incrémente le nom du photographe dans la modale
+          document.querySelector(".photographer-name").innerHTML =
+            photographer.name;
+
           //Incrémente les infos selon la condition précédente
 
           document.querySelector("#photographer-name").innerHTML =
@@ -79,8 +83,6 @@ export async function init(idPhotographer) {
         });
       }
 
-      console.log(picturesArray);
-
       //Décompte des likes dans encart de bas de page
 
       const reducer = (acc, currentVal) => acc + currentVal;
@@ -129,7 +131,7 @@ export async function init(idPhotographer) {
         heartArray[h].addEventListener("click", fillHeart);
       }
     }); //Fin du 2eme .then()
-} //Fin de la function asynchrone init()
+}; //Fin de la function asynchrone init()
 
 init(82);
 
@@ -145,19 +147,31 @@ ligthbox.addEventListener("click", (e) => {
 // Ouverture de la modale de contact
 
 let contact = document.querySelector("#contact");
-console.log(contact);
 contact.addEventListener("click", (e) => {
   document.getElementById("container-modale").style.display = "flex";
 });
 
 // Fermeture de la modale de contact
+
+// Fermeture avec la croix
 let contactContainer = document.getElementById("container-modale");
 document.getElementById("cross-close").addEventListener("click", (e) => {
   contactContainer.style.display = "none";
 });
+
+// Fermeture au clic hors de la modale
 
 contactContainer.addEventListener("click", (e) => {
   if (e.target === e.currentTarget) {
     return (contactContainer.style.display = "none");
   }
 });
+
+// comportement à l'intérieur de la modale de contact
+
+import { f_valid } from "./_formValidation.js";
+
+const submit = document.getElementById("submit");
+submit.addEventListener("click", f_valid);
+
+// Filtrage des médias

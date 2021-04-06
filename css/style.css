@@ -55,7 +55,7 @@ body {
   padding: 21px 11px;
   font-weight: 700;
   font-size: 20px;
-  background-color: #901C1C;
+  background-color: #901c1c;
   border-style: unset;
   border-radius: 5px;
   cursor: pointer;
@@ -67,12 +67,16 @@ body {
   font-size: 18px;
 }
 
+#button-filter {
+  display: none;
+}
+
 .popularity-button {
   color: white;
   padding: 21px 11px;
   font-weight: 700;
   font-size: 18px;
-  background-color: #901C1C;
+  background-color: #901c1c;
   border-style: unset;
   border-radius: 5px;
   cursor: pointer;
@@ -83,7 +87,7 @@ body {
 }
 .popularity-button__opened {
   position: absolute;
-  display: none;
+  /* display: none; */
 }
 .popularity-button__opened ul {
   margin: unset;
@@ -135,7 +139,7 @@ body {
 .photo-footer {
   margin-top: 10px;
   font-size: 24px;
-  color: #901C1C;
+  color: #901c1c;
 }
 .photo-footer__likes {
   float: right;
@@ -161,7 +165,7 @@ body {
   right: 36px;
   font-size: 24px;
   font-weight: 500;
-  background-color: #DB8876;
+  background-color: #db8876;
   padding: 21px 34px;
   border-radius: 5px 5px 0 0;
 }
@@ -199,7 +203,7 @@ body {
 }
 
 #modale {
-  background-color: #DB8876;
+  background-color: #db8876;
   width: 40%;
   height: auto;
   border-radius: 5px;
@@ -240,7 +244,8 @@ body {
   margin-bottom: 10px;
   font-family: "DM SANS";
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
+  font-size: 20px;
 }
 #modal-form textarea {
   min-height: 150px;
@@ -248,7 +253,7 @@ body {
   min-width: 100%;
 }
 #modal-form #submit {
-  background-color: #901C1C;
+  background-color: #901c1c;
   color: white;
   width: 30%;
   height: auto;
@@ -256,12 +261,17 @@ body {
   padding-bottom: 20px;
 }
 
+.error {
+  position: relative;
+  bottom: 8px;
+}
+
 .tags {
   display: inline;
-  color: #901C1C;
+  color: #901c1c;
   font-size: 9px;
   font-weight: 500;
-  border: solid 0.5px #C4C4C4;
+  border: solid 0.5px #c4c4c4;
   border-radius: 11px;
   padding: 3px 7px 3px 7px;
   margin-right: 5px;
@@ -269,7 +279,7 @@ body {
 }
 
 .tags:hover {
-  background-color: #901C1C;
+  background-color: #901c1c;
   color: white;
 }
 
@@ -305,7 +315,7 @@ header a {
   width: 182px;
   text-align: center;
   margin: auto;
-  background-color: #DB8876;
+  background-color: #db8876;
   border-radius: 5px;
   padding: 6px 8px;
   cursor: pointer;
@@ -323,10 +333,10 @@ header a {
 }
 .navigation-bar__tags {
   display: inline;
-  color: #901C1C;
+  color: #901c1c;
   font-size: 12px;
   font-weight: 500;
-  border: solid 0.5px #C4C4C4;
+  border: solid 0.5px #c4c4c4;
   border-radius: 11px;
   padding: 3px 7px 3px 7px;
   margin-right: 5px;
@@ -336,7 +346,7 @@ header a {
 .title {
   grid-area: title;
   display: inline;
-  color: #901C1C;
+  color: #901c1c;
   font-weight: 400;
   font-size: 36px;
   margin: unset;
@@ -374,13 +384,13 @@ header a {
   margin: unset;
   font-size: 36px;
   font-weight: 400;
-  color: #D3573C;
+  color: #d3573c;
 }
 .container-profile__information {
   grid-area: infos;
 }
 .container-profile__information .location {
-  color: #901C1C;
+  color: #901c1c;
   font-size: 13px;
   font-weight: 400;
   margin: unset;
