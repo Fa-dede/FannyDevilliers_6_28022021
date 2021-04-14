@@ -1,7 +1,14 @@
+import { f_valid } from "./_library_functions.js";
+
+let totalNumberOfLikesArray = [];
+let heartArray = document.getElementsByClassName("hearts");
+let mediaArray = [];
+
 const init = async (idPhotographer) => {
   const photographer = await fetch("./datas.json")
     .then((response) => response.json())
     .then((datas) => {
+      // BOUCLE 1 : boucle chaque photographe
       datas.photographers.forEach((photographer) => {
         // Début de l'encart fixe de bas de page (dans la boucle photographer = boucle 1)
 
@@ -38,35 +45,25 @@ const init = async (idPhotographer) => {
         } //Fin de ma Condition1 : if (photographer.id === idPhotographer)
       }); //Fin de la Boucle1 : datas.photographers.forEach((photographer) =>
 
-      let totalNumberOfLikesArray = [];
-      let heartArray = document.getElementsByClassName("hearts");
-      let mediaArray = [];
-      let dateArray = [];
-      let popularityArray = [];
-
       //Boucle2 : boucle les médias
       datas.media.forEach((media) => {
         // condition 2.1 qui filtre les médias si la valeur PhotographerId = à mon paramètre idPhotographer
         if (media.photographerId == idPhotographer) {
           //incrémente les médias dans un tableau Js
           mediaArray.push(media);
-          dateArray.push(media.date);
-          popularityArray.push(media.likes);
         }
       });
 
-      // méthode qui permet de trier mes dates de la plus récente à la plus  ancienne
-      let dateRecentArray = dateArray.sort().reverse();
-      console.log(dateRecentArray);
-      console.log(popularityArray);
+      // méthode qui permet de trier les médias du plus au moins Populaires directement dans le tableau mediaArray
+      let mediaArrayFilteredByPopularity = mediaArray.sort((a, b) => {
+        return a.likes - b.likes;
+      });
 
-      // boucle sur le tableau des dates
-      dateRecentArray.forEach((date) => {
-        // boucle interne au tableau des dates qui boucle chaque média
-        mediaArray.forEach((media) => {
-          //condition qui permet d'afficher mes médias en suivant l'ordre du tableau de date
-          if (media.date === date) {
-            document.querySelector("#portfolio").innerHTML += `
+      // Fonction qui incrémente les médias selon un filtre défini en argument
+
+      const addMedias = (typeOfFilter) => {
+        typeOfFilter.forEach((media) => {
+          document.querySelector("#portfolio").innerHTML += `
             <figure class="photo">
                 <img
                     class="photo-picture"
@@ -83,14 +80,13 @@ const init = async (idPhotographer) => {
                 </footer>
             </figure>`;
 
-            totalNumberOfLikesArray.push(media.likes);
-          }
+          totalNumberOfLikesArray.push(media.likes);
         });
-      });
+      };
 
-      // Boucle 3 : boucle les média du tableau créé ci-dessus pour les afficher
+      //Fin de fonction addMedias(typeOfFilter)
 
-      //Fin de Boucle 3 : mediaArray.forEach()
+      addMedias(mediaArrayFilteredByPopularity.reverse());
 
       //Clic sur les photos pour faire apparaitre la lightbox
 
@@ -194,9 +190,5 @@ contactContainer.addEventListener("click", (e) => {
 
 // comportement à l'intérieur de la modale de contact
 
-import { f_valid } from "./_formValidation.js";
-
 const submit = document.getElementById("submit");
 submit.addEventListener("click", f_valid);
-
-// Filtrage des médias

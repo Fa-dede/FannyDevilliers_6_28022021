@@ -1,164 +1,156 @@
-@import "./Utils/variables";
-@import "./Themes/typography";
-@import "./Utils/mixins";
-@import "./Themes/photographer-page";
-@import "./Composants/components";
+@import "./variables";
+@import "./typography";
+@import "./mixins";
+@import "./photographer-page";
+@import "./components";
 
 // *{
 //     border: 1px solid grey;
 // }
 
-body{
-    @include dm-sans;
+body {
+  @include dm-sans;
 }
 
 // .container{
 //     // grid-template-columns: repeat(4,1fr);
 //     // grid-template-rows: repeat(3, 1fr);
-//     // grid-template-areas: 
+//     // grid-template-areas:
 //     // "header header title title";
 // }
 
-header{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    align-items: center;
-    justify-items: center;
-    grid-template-areas: 
-    "logo navbar navbar title";
-    // margin-left: 100px;
-    padding: 20px;
-    margin-top: unset;
-    a{
-        text-decoration: none;
-        width: 200px;
-        height: 50px;
-    }
+header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "logo navbar navbar title";
+  // margin-left: 100px;
+  padding: 20px;
+  margin-top: unset;
+  a {
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+  }
 }
 
-#logo-index{
-    
-    grid-area: logo;
-    width: inherit;
+#logo-index {
+  grid-area: logo;
+  width: inherit;
+  display: inline;
+}
+
+#scroll-to-main-button {
+  display: none;
+  font-weight: 700;
+  font-size: 18px;
+  width: 182px;
+  text-align: center;
+  margin: auto;
+  background-color: $scroll-top-button-background;
+  border-radius: 5px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.navigation-bar {
+  display: inline;
+  grid-area: navbar;
+  text-align: center;
+  ul {
     display: inline;
-}
-
-#scroll-to-main-button{
-    display: none;
-    font-weight: 700;
-    font-size: 18px;
-    width: 182px;
-    text-align: center;
-    margin: auto;
-    background-color: $scroll-top-button-background;
-    border-radius: 5px;
-    padding: 6px 8px;
+    padding-inline-start: 0;
+    line-height: 30px;
+  }
+  &__tags {
+    display: inline;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 500;
+    border: solid 0.5px $tags-border-color;
+    border-radius: 11px;
+    padding: 3px 7px 3px 7px;
+    margin-right: 5px;
     cursor: pointer;
+  }
 }
 
-.navigation-bar{
-
-    display: inline;
-    grid-area: navbar;
-    text-align: center;
-    ul{
-        display: inline;
-        padding-inline-start: 0;
-        line-height: 30px;
-    }
-    &__tags {
-            display: inline;
-            color: $primary-color;
-            font-size: 12px;
-            font-weight: 500;
-            border: solid .5px $tags-border-color;
-            border-radius: 11px;
-            padding: 3px 7px 3px 7px;
-            margin-right: 5px;
-            cursor: pointer;
-        }
-    }
-
-    .title{
-        grid-area: title;
-        display: inline;
-        color: $primary-color;
-        font-weight: 400;
-        font-size: 36px;
-        margin: unset;
-    }
-
-.main-container{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(1,1fr);
-    margin-bottom: 87px;
-    margin-top: -20px;
+.title {
+  grid-area: title;
+  display: inline;
+  color: $primary-color;
+  font-weight: 400;
+  font-size: 36px;
+  margin: unset;
 }
 
-.container-profile{
-    // width: 263px;
-    text-align: center;
-    a{
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: unset;
-    }
-    &__picture{
-        margin-top: 40px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        @include box-shadow;
-    }
-    &__name{
-        grid-area: names;
-        margin: unset;
-        font-size: 36px;
-        font-weight: 400;
-        color: $profile-name-color;
-    }
-    &__information {
-        grid-area: infos;
-        
-        .location{
-            color: $primary-color;
-            font-size: 13px;
-            font-weight: 400;
-            margin: unset;
-        }
-        .quote{
-            margin:unset;
-            margin-top: 3px;
-            font-size: 10px;
-            font-weight: 400;
-        }
-        .prices{
-            color: $prices-color;
-            font-weight: 400;
-            font-size: 9px;
-            margin: unset;
-            margin-top: 3px;
-        }
-    }
-    &__tags{
-        grid-area: tags;
-        ul{
-            padding-inline-start: unset;
-            margin: unset;
-            margin-top: 8px;
-        }
-    }
+.main-container {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin-bottom: 87px;
+  margin-top: -20px;
 }
 
+.container-profile {
+  // width: 263px;
+  text-align: center;
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: unset;
+  }
+  &__picture {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    @include box-shadow;
+  }
+  &__name {
+    grid-area: names;
+    margin: unset;
+    font-size: 36px;
+    font-weight: 400;
+    color: $profile-name-color;
+  }
+  &__information {
+    grid-area: infos;
 
+    .location {
+      color: $primary-color;
+      font-size: 13px;
+      font-weight: 400;
+      margin: unset;
+    }
+    .quote {
+      margin: unset;
+      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 400;
+    }
+    .prices {
+      color: $prices-color;
+      font-weight: 400;
+      font-size: 9px;
+      margin: unset;
+      margin-top: 3px;
+    }
+  }
+  &__tags {
+    grid-area: tags;
+    ul {
+      padding-inline-start: unset;
+      margin: unset;
+      margin-top: 8px;
+    }
+  }
+}
 
-
-
-
-@import './Themes/tablet-resolution';
-@import "./Themes/mobile-resolution";
+@import "./tablet-resolution";
+@import "./mobile-resolution";

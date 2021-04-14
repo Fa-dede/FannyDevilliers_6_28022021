@@ -84,7 +84,7 @@ body {
   }
   &__opened {
     position: absolute;
-    display: none;
+    // display: none;
     ul {
       margin: unset;
       padding: unset;
@@ -179,14 +179,39 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   display: none;
   justify-content: center;
   align-items: center;
 }
 
+#ligthbox--container-elements {
+  display: flex;
+  z-index: inherit;
+  justify-content: center;
+}
+
 #image-clicked {
-  width: 40%;
+  width: 45%;
+  display: block;
+}
+
+#ligthbox--close-button {
+  background-color: transparent;
+  border: none;
+  color: $primary-color;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.ligthbox--buttons {
+  z-index: inherit;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: $primary-color;
+  padding: 35px;
 }
 
 // Modale de contact

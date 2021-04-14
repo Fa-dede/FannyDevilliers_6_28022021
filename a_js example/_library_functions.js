@@ -15,6 +15,21 @@ const f_valid = (e) => {
     email: document.getElementById("error-email"),
   };
 
+  /*
+  alerts.firstName
+  alerts['firstName']
+  isValid(inputs, "firstName", "Veuillez saisir votre nom");
+
+ isValid(inputs, property, errorMessage) {
+    if (inputs[property].validity.valueMissing) {
+      e.preventDefault();
+      alerts[property].innerText = errorMessage;
+      alerts[property].email.style.color = "white";
+      inputs[property].email.focus();
+    }
+  }
+  */
+
   // Validation du Message
   if (inputs.message.validity.valueMissing) {
     e.preventDefault();
@@ -89,4 +104,42 @@ const f_valid = (e) => {
   }
 };
 
-export { f_valid };
+const addMedias = (typeOfFilter) => {
+  typeOfFilter.forEach((media) => {
+    document.querySelector("#portfolio").innerHTML += `
+      <figure class="photo">
+          <img
+              class="photo-picture"
+              src="./img/${media.photographerId}/${media.image}"
+              alt=""
+              />
+
+          <footer class="photo-footer">
+          <span class="photo-footer__title">${media.title}</span>
+          <span class="photo-footer__likes"
+              ><span class="heart-txt">${media.likes}</span> <i class="hearts far fa-heart"></i
+          ></span>
+          <span class="photo-footer__price">${media.price} €</span>
+          </footer>
+      </figure>`;
+
+    totalNumberOfLikesArray.push(media.likes);
+  });
+};
+
+// // méthode qui permet de trier mes dates de la plus ancienne à la plus récente directement dans le tableau mediaArray
+// let mediaArrayFilteredByDates = [...mediaArray].sort((a, b) => {
+//   return new Date(a.date) - new Date(b.date);
+// });
+
+// // méthode qui permet de trier les médias du plus au moins Populaires directement dans le tableau mediaArray
+// export let mediaArrayFilteredByPopularity = [...mediaArray].sort((a, b) => {
+//   return a.likes - b.likes;
+// });
+
+// // méthode qui permet de trier les médias par ordre Alphabétique
+// let mediaArrayFilteredByTitle = [...mediaArray].sort((a, b) => {
+//   return a.title > b.title ? 1 : -1;
+// });
+
+export { f_valid, addMedias };
