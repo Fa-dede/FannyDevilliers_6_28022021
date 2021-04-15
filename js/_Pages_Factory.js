@@ -5,6 +5,7 @@ import {
   addFooterInsert,
 } from "./_photographer_elements.js";
 import { modaleBehaviour } from "./_modale_contact.js";
+import { addAsFavorite } from "./_add_to_favorite.js";
 
 class PagesFactory {
   constructor(photographerID, path) {
@@ -36,6 +37,7 @@ class PagesFactory {
         new MediasFactory(this.medias, this.photographerID, "video");
         modaleBehaviour();
         addFooterInsert(this.medias, this.photographers, this.photographerID);
+        addAsFavorite();
       });
   }
 

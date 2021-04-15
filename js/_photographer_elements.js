@@ -1,4 +1,4 @@
-/**
+/** AJOUTE LE PROFIL DES PHOTOGRAPHES SUR LA HOMEPAGE
  *
  * @param {array} photographer
  */
@@ -33,7 +33,7 @@ const addPhotographerCard = (photographer) => {
   });
 };
 
-/**
+/** AJOUTE L'ETIQUETTE DU PHOTOGRAPHE SUR PHOTOGRAPHER-PAGE
  *
  * @param {array} photographers
  * @param {number} photographerID
@@ -61,6 +61,12 @@ const addPhotographerLabel = (photographers, photographerID) => {
   });
 };
 
+/** ENCART DE BAS DE PAGE (LIKES + PRICE)
+ *
+ * @param {array} medias
+ * @param {array} photographers
+ * @param {number} photographerID
+ */
 const addFooterInsert = (medias, photographers, photographerID) => {
   photographers.forEach((photographer) => {
     document.querySelector(".static-insert").innerHTML = `
