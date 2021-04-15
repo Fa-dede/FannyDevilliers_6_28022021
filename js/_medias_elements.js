@@ -30,7 +30,6 @@ const addPhotos = (medias, photographerID) => {
 const addVideos = (medias, photographerID) => {
   medias.forEach((media) => {
     if (media.photographerId == photographerID && media.video) {
-      console.log(media.video);
       document.querySelector("#portfolio").innerHTML += `
       <figure class="photo">
       <video alt preload loop autoplay class = 'photo-picture' src="./img/${media.photographerId}/${media.video}">Ici la description alternative</video>

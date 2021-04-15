@@ -2,7 +2,9 @@ import { MediasFactory } from "./_Medias_Factory.js";
 import {
   addPhotographerCard,
   addPhotographerLabel,
+  addFooterInsert,
 } from "./_photographer_elements.js";
+import { modaleBehaviour } from "./_modale_contact.js";
 
 class PagesFactory {
   constructor(photographerID, path) {
@@ -32,6 +34,8 @@ class PagesFactory {
         addPhotographerLabel(this.photographers, this.photographerID);
         new MediasFactory(this.medias, this.photographerID, "photo");
         new MediasFactory(this.medias, this.photographerID, "video");
+        modaleBehaviour();
+        addFooterInsert(this.medias, this.photographers, this.photographerID);
       });
   }
 
