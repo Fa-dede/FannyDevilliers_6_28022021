@@ -12,6 +12,7 @@ const addAsFavorite = () => {
         selectedHeartCount.innerHTML =
           parseInt(selectedHeartCount.innerHTML, 10) + 1;
         heart.style.fontWeight = "bold";
+        let likesPerPage = 0;
       } else {
         addedToFavorite = false;
         selectedHeartCount.innerHTML =
