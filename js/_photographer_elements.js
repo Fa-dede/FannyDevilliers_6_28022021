@@ -1,5 +1,3 @@
-import { PagesFactory } from "./_Pages_Factory.js";
-
 const addPhotographerCard = (photographer) => {
   photographer.forEach((photographer) => {
     let arrayTags = photographer.tags; // tableaux des tags des photographes
@@ -8,26 +6,26 @@ const addPhotographerCard = (photographer) => {
     // méthode.join('') qui incrémente mes <li> dans une <ul>
     let mainContainer = document.querySelector(".main-container");
     mainContainer.innerHTML += `
-          <article id="first-profile" class="container-profile">
-            <a href="./photographer-page.html?id=${photographer.id}">
-              <figure>
-                <img
-                  class="container-profile__picture"
-                  src="./img/Portraits/${photographer.portrait}"
-                 alt="${photographer.name}'s profile"
-                />
-              </figure>
-    
-              <h2 class="container-profile__name">${photographer.name}</h2>
-            </a>
-    
-            <div class="container-profile__information">
-              <h3 class="location">${photographer.city}, ${photographer.country}</h3>
-              <h4 class="quote">${photographer.tagline}</h4>
-              <h5 class="prices">${photographer.price} € / jour</h5>
-            </div>
-            ${tags}
-          </article>`;
+            <article id="first-profile" class="container-profile">
+              <a href="./photographer-page.html?id=${photographer.id}">
+                <figure>
+                  <img
+                    class="container-profile__picture"
+                    src="./img/Portraits/${photographer.portrait}"
+                   alt="${photographer.name}'s profile"
+                  />
+                </figure>
+      
+                <h2 class="container-profile__name">${photographer.name}</h2>
+              </a>
+      
+              <div class="container-profile__information">
+                <h3 class="location">${photographer.city}, ${photographer.country}</h3>
+                <h4 class="quote">${photographer.tagline}</h4>
+                <h5 class="prices">${photographer.price} € / jour</h5>
+              </div>
+              ${tags}
+            </article>`;
   });
 };
 
@@ -56,11 +54,4 @@ const addPhotographerLabel = (photographers, photographerID) => {
   }); // FIN BOUCLE 1 - forEach((photographer)});
 };
 
-const path = window.location.pathname;
-console.log(path);
-
-const queryString = window.location.search; //récupère infos de l'url
-const urlParams = new URLSearchParams(queryString); //objet qui represente paramètre url
-const photographerID = urlParams.get("id"); //récupère la valeur d'un paramètre
-
-const newPage = new PagesFactory(photographerID, path);
+export { addPhotographerCard, addPhotographerLabel };
