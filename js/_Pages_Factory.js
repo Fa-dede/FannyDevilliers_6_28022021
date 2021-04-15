@@ -1,3 +1,4 @@
+import { MediasFactory } from "./_Medias_Factory.js";
 import {
   addPhotographerCard,
   addPhotographerLabel,
@@ -27,7 +28,10 @@ class PagesFactory {
       .then((datas) => {
         this.photographers = datas.photographers;
         this.photographerID = this.photographerID;
+        this.medias = datas.media;
         addPhotographerLabel(this.photographers, this.photographerID);
+        new MediasFactory(this.medias, this.photographerID, "photo");
+        new MediasFactory(this.medias, this.photographerID, "video");
       });
   }
 

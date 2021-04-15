@@ -1,3 +1,7 @@
+/**
+ *
+ * @param {array} photographer
+ */
 const addPhotographerCard = (photographer) => {
   photographer.forEach((photographer) => {
     let arrayTags = photographer.tags; // tableaux des tags des photographes
@@ -29,11 +33,14 @@ const addPhotographerCard = (photographer) => {
   });
 };
 
+/**
+ *
+ * @param {array} photographers
+ * @param {number} photographerID
+ */
 const addPhotographerLabel = (photographers, photographerID) => {
-  // BOUCLE 1 : Boucle chaque photographe du JSON
   photographers.forEach((photographer) => {
     if (photographer.id == photographerID) {
-      //PROFIL PHOTOGRAPHE : incrémente infos du photographe
       document.querySelector("#photographer-name").innerHTML =
         photographer.name;
       document.querySelector(
@@ -50,8 +57,8 @@ const addPhotographerLabel = (photographers, photographerID) => {
           "tag-list"
         ).innerHTML += `<li class="tags">#${tag}</li> `;
       });
-    } // FIN DE CONDITION  id photographer
-  }); // FIN BOUCLE 1 - forEach((photographer)});
+    }
+  });
 };
 
 export { addPhotographerCard, addPhotographerLabel };
