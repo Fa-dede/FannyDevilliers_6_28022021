@@ -51,3 +51,4 @@ class PagesFactory {
 }
 
 export { PagesFactory };
+let init;
