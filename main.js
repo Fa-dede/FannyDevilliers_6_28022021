@@ -1,4 +1,4 @@
-import { PagesFactory } from "./_Pages_Factory";
+import { PagesFactory } from "./_Pages_Factory.js";
 
 const path = window.location.pathname;
 
