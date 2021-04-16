@@ -7,7 +7,7 @@ import {
 import { modaleBehaviour } from "./_modale_contact.js";
 import { addAsFavorite } from "./_add_to_favorite.js";
 
-class PagesFactory {
+export class PagesFactory {
   constructor(photographerID, path) {
     this.photographerID = photographerID;
     this.path = path;
@@ -49,5 +49,3 @@ class PagesFactory {
     }
   }
 }
-
-export { PagesFactory };
