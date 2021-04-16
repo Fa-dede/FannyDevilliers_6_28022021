@@ -318,14 +318,18 @@ header {
 }
 header a {
   text-decoration: none;
+}
+
+.logo-index {
+  grid-area: logo;
+  width: inherit;
+  display: inline;
   width: 200px;
   height: 50px;
 }
 
-#logo-index {
-  grid-area: logo;
-  width: inherit;
-  display: inline;
+#logo-full {
+  display: none;
 }
 
 #scroll-to-main-button {

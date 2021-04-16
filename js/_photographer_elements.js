@@ -57,6 +57,12 @@ const addPhotographerLabel = (photographers, photographerID) => {
           "tag-list"
         ).innerHTML += `<li class="tags">#${tag}</li> `;
       });
+
+      //AJOUTE LE NOM DU PHOTOGRAPHE DANS LE HEAD TITLE DE LA PAGE
+
+      document.querySelector(
+        ".photographer-name-title"
+      ).innerHTML = `${photographer.name}`;
     }
   });
 };
