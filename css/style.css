@@ -83,6 +83,7 @@ body {
 }
 .popularity-button__opened {
   position: absolute;
+  z-index: 999;
 }
 .popularity-button__opened ul {
   margin: unset;
@@ -168,7 +169,14 @@ body {
   margin-right: 67px;
 }
 
-#ligthbox {
+.lightbox__loader {
+  width: 38px;
+  height: 38px;
+  opacity: 0.5;
+  background: url(../img/loader.svg) center center no-repeat;
+}
+
+#lightbox {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -180,33 +188,22 @@ body {
   align-items: center;
 }
 
-#ligthbox--container-elements {
+#container-for-picture-selected {
   display: flex;
-  z-index: inherit;
   justify-content: center;
+  z-index: inherit;
+  border: solid 1px black;
+  margin: auto;
 }
 
 #image-clicked {
-  width: 45%;
+  width: 50%;
   display: block;
 }
 
-#ligthbox--close-button {
-  background-color: transparent;
-  border: none;
-  color: #901C1C;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.ligthbox--buttons {
-  z-index: inherit;
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
-  color: #901C1C;
-  padding: 35px;
+#video-clicked {
+  width: 80%;
+  display: block;
 }
 
 #container-modale {
@@ -215,7 +212,7 @@ body {
   width: 100%;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,6 +362,10 @@ header a {
   padding: 3px 7px 3px 7px;
   margin-right: 5px;
   cursor: pointer;
+}
+.navigation-bar .active {
+  background-color: #901C1C;
+  color: white;
 }
 
 .title {

@@ -78,6 +78,10 @@ header {
     margin-right: 5px;
     cursor: pointer;
   }
+  .active {
+    background-color: $primary-color;
+    color: white;
+  }
 }
 
 .title {
