@@ -10,7 +10,7 @@ const addPhotographerCard = (photographer) => {
     // méthode.join('') qui incrémente mes <li> dans une <ul>
     let mainContainer = document.querySelector(".main-container");
     mainContainer.innerHTML += `
-            <article id="first-profile" class="container-profile">
+            <article class="container-profile">
               <a href="./photographer-page.html?id=${photographer.id}">
                 <figure>
                   <img
@@ -67,30 +67,4 @@ const addPhotographerLabel = (photographers, photographerID) => {
   });
 };
 
-/** ENCART DE BAS DE PAGE (LIKES + PRICE)
- *
- * @param {array} medias
- * @param {array} photographers
- * @param {number} photographerID
- */
-const addFooterInsert = (medias, photographers, photographerID) => {
-  photographers.forEach((photographer) => {
-    document.querySelector(".static-insert").innerHTML = `
-        <span class="total-likes"></span>
-        <span class ='price-per-day'>${photographer.price}€ / jour</span>
-        `;
-  });
-  let totalNumberOfLikesArray = [];
-  medias.forEach((media) => {
-    if (media.photographerId == photographerID) {
-      totalNumberOfLikesArray.push(media.likes);
-      const reducer = (acc, currentVal) => acc + currentVal;
-      let likesPerPage = totalNumberOfLikesArray.reduce(reducer);
-      document.querySelector(
-        ".total-likes"
-      ).innerHTML = `${likesPerPage} <i class="fas fa-heart"></i>`;
-    }
-  });
-};
-
-export { addPhotographerCard, addPhotographerLabel, addFooterInsert };
+export { addPhotographerCard, addPhotographerLabel };

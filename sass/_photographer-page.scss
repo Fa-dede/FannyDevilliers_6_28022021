@@ -1,3 +1,6 @@
+// * {
+//   border: solid 1px black;
+// }
 body {
   margin-left: unset;
 }
@@ -84,7 +87,7 @@ body {
   }
   &__opened {
     position: absolute;
-    // display: none;
+    z-index: 999; // display: none;
     ul {
       margin: unset;
       padding: unset;
@@ -173,7 +176,14 @@ body {
   }
 }
 
-#ligthbox {
+.lightbox__loader {
+  width: 38px;
+  height: 38px;
+  opacity: 0.5;
+  background: url(../img/loader.svg) center center no-repeat;
+}
+
+#lightbox {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -185,34 +195,42 @@ body {
   align-items: center;
 }
 
-#ligthbox--container-elements {
+#container-for-picture-selected {
   display: flex;
-  z-index: inherit;
   justify-content: center;
+  z-index: inherit;
+  border: solid 1px black;
+  margin: auto;
 }
 
 #image-clicked {
-  width: 45%;
+  width: 50%;
+  // min-height: 400px;
   display: block;
 }
 
-#ligthbox--close-button {
-  background-color: transparent;
-  border: none;
-  color: $primary-color;
-  font-size: 30px;
-  cursor: pointer;
+#video-clicked {
+  width: 80%;
+  display: block;
 }
 
-.ligthbox--buttons {
-  z-index: inherit;
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
-  color: $primary-color;
-  padding: 35px;
-}
+// #lightbox--close-button {
+//   background-color: transparent;
+//   border: none;
+//   color: $primary-color;
+//   font-size: 30px;
+//   cursor: pointer;
+// }
+
+// .lightbox--buttons {
+//   z-index: inherit;
+//   background-color: transparent;
+//   border: none;
+//   font-size: 40px;
+//   cursor: pointer;
+//   color: $primary-color;
+//   padding: 35px;
+// }
 
 // Modale de contact
 
@@ -222,8 +240,7 @@ body {
   width: 100%;
   top: 0;
   position: fixed;
-  z-index: 999;
-
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;

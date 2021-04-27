@@ -1,11 +1,11 @@
-import { MediasFactory } from "./_Medias_Factory.js";
+import { MediasFactory } from "./Medias_Factory.js";
 import {
   addPhotographerCard,
   addPhotographerLabel,
-  addFooterInsert,
-} from "./_photographer_elements.js";
-import { modaleBehaviour } from "./_modale_contact.js";
-import { addAsFavorite } from "./_add_to_favorite.js";
+} from "./photographer_elements.js";
+import { modaleBehaviour } from "./modale_contact.js";
+import { globalLikesCounters } from "./likes_counter.js";
+import { sortByTags } from "./tags_filters.js";
 
 class PagesFactory {
   constructor(photographerID, path) {
@@ -22,6 +22,7 @@ class PagesFactory {
       .then((datas) => {
         this.photographers = datas.photographers;
         addPhotographerCard(this.photographers);
+        sortByTags();
       });
   }
 
@@ -30,14 +31,29 @@ class PagesFactory {
       .then((response) => response.json())
       .then((datas) => {
         this.photographers = datas.photographers;
+        let photographers = this.photographers;
         this.photographerID = this.photographerID;
         this.medias = datas.media;
-        addPhotographerLabel(this.photographers, this.photographerID);
-        new MediasFactory(this.medias, this.photographerID, "photo");
-        new MediasFactory(this.medias, this.photographerID, "video");
-        modaleBehaviour();
-        addFooterInsert(this.medias, this.photographers, this.photographerID);
-        addAsFavorite();
+
+        //FACTORY DE PAGE AVEC MEDIAS
+        new MediasFactory(this.medias, this.photographerID, this.photographers);
+
+        //ETIQUETTE DU PHOTOGRAPHE
+        addPhotographerLabel(photographers, this.photographerID);
+
+        //MODALE
+        modaleBehaviour(this.photographers, this.photographerID);
+        new globalLikesCounters(
+          this.medias,
+          this.photographers,
+          this.photographerID
+        );
+
+        //LIGHTBOX
+        // this.picturesArray = document.querySelectorAll(".photo-picture");
+        // this.pictures = [...this.picturesArray];
+
+        // new lightbox(this.pictures);
       });
   }
 

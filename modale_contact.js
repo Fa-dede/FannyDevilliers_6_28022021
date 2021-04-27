@@ -1,12 +1,21 @@
-import { form_validation } from "./_modale_form_validation.js";
+import { form_validation } from "./modale_form_validation.js";
 
 let contactContainer = document.getElementById("container-modale");
 
 // Ouverture au clic
-const openModale = () => {
+const openModale = (photographers, photographerID) => {
   let contact = document.querySelector("#contact");
   contact.addEventListener("click", (e) => {
     document.getElementById("container-modale").style.display = "flex";
+
+    //Ajoute le nom du photographe dans la modale
+    photographers.forEach((photographer) => {
+      if (photographer.id == photographerID) {
+        document.querySelector(
+          ".photographer-name"
+        ).innerHTML = `${photographer.name}`;
+      }
+    });
   });
 };
 
@@ -29,11 +38,11 @@ const closeModaleWithMouseout = () => {
 // comportement à l'intérieur de la modale de contact
 const validation = () => {
   const submit = document.getElementById("submit");
-  submit.addEventListener("click", form_validation); //fonction déclarée dans library_functions.js
+  submit.addEventListener("click", form_validation);
 };
 
-const modaleBehaviour = () => {
-  openModale();
+const modaleBehaviour = (photographers, photographerID) => {
+  openModale(photographers, photographerID);
   closeModaleWithCross();
   closeModaleWithMouseout();
   validation();
