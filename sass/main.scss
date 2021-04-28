@@ -78,6 +78,10 @@ header {
     margin-right: 5px;
     cursor: pointer;
   }
+  .active {
+    background-color: $primary-color;
+    color: white;
+  }
 }
 
 .title {
@@ -90,16 +94,18 @@ header {
 }
 
 .main-container {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  // grid-area: main;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(1, 1fr);
   margin-bottom: 87px;
   margin-top: -20px;
 }
 
 .container-profile {
-  // width: 263px;
+  width: 30%;
   text-align: center;
   a {
     width: 100%;
@@ -149,11 +155,14 @@ header {
   &__tags {
     grid-area: tags;
     ul {
-      padding-inline-start: unset;
       margin: unset;
       margin-top: 8px;
     }
   }
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 @import "./tablet-resolution";

@@ -67,9 +67,21 @@ body {
   font-size: 18px;
 }
 
+#selected-filter {
+  text-align: start;
+  margin-left: 20px;
+  list-style: none;
+  padding-top: 4px;
+}
+#selected-filter i {
+  margin: unset;
+  display: block;
+  float: right;
+  margin-right: 10px;
+}
+
 .popularity-button {
   color: white;
-  padding: 21px 11px;
   font-weight: 700;
   font-size: 18px;
   background-color: #901C1C;
@@ -77,12 +89,15 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 13px;
+  width: 170px;
 }
 .popularity-button .fas {
   margin-left: 26px;
 }
 .popularity-button__opened {
   position: absolute;
+  z-index: 999;
+  padding: 21px 11px;
 }
 .popularity-button__opened ul {
   margin: unset;
@@ -114,13 +129,16 @@ body {
   margin-left: 100px;
   margin-right: 80px;
   padding-bottom: 150px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 71px 20px;
 }
 
 .photo {
   margin: unset;
+  width: 33%;
   width: 350px;
   height: 300px;
 }
@@ -168,7 +186,14 @@ body {
   margin-right: 67px;
 }
 
-#ligthbox {
+.lightbox__loader {
+  width: 38px;
+  height: 38px;
+  opacity: 0.5;
+  background: url(../img/loader.svg) center center no-repeat;
+}
+
+#lightbox {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -180,33 +205,22 @@ body {
   align-items: center;
 }
 
-#ligthbox--container-elements {
+#container-for-picture-selected {
   display: flex;
-  z-index: inherit;
   justify-content: center;
+  z-index: inherit;
+  border: solid 1px black;
+  margin: auto;
 }
 
 #image-clicked {
-  width: 45%;
+  width: 50%;
   display: block;
 }
 
-#ligthbox--close-button {
-  background-color: transparent;
-  border: none;
-  color: #901C1C;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.ligthbox--buttons {
-  z-index: inherit;
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
-  color: #901C1C;
-  padding: 35px;
+#video-clicked {
+  width: 80%;
+  display: block;
 }
 
 #container-modale {
@@ -215,7 +229,7 @@ body {
   width: 100%;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,6 +380,10 @@ header a {
   margin-right: 5px;
   cursor: pointer;
 }
+.navigation-bar .active {
+  background-color: #901C1C;
+  color: white;
+}
 
 .title {
   grid-area: title;
@@ -377,15 +395,15 @@ header a {
 }
 
 .main-container {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 87px;
   margin-top: -20px;
 }
 
 .container-profile {
+  width: 30%;
   text-align: center;
 }
 .container-profile a {
@@ -436,9 +454,12 @@ header a {
   grid-area: tags;
 }
 .container-profile__tags ul {
-  padding-inline-start: unset;
   margin: unset;
   margin-top: 8px;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 @media screen and (max-width: 850px) {
