@@ -72,9 +72,21 @@ body {
   font-size: 18px;
 }
 
+#selected-filter {
+  text-align: start;
+  margin-left: 20px;
+  list-style: none;
+  padding-top: 4px;
+  i {
+    margin: unset;
+    display: block;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
 .popularity-button {
   color: white;
-  padding: 21px 11px;
   font-weight: 700;
   font-size: 18px;
   background-color: $primary-color;
@@ -82,12 +94,16 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 13px;
+  width: 170px;
   .fas {
     margin-left: 26px;
   }
   &__opened {
     position: absolute;
-    z-index: 999; // display: none;
+    z-index: 999;
+    padding: 21px 11px;
+
+    // display: none;
     ul {
       margin: unset;
       padding: unset;
@@ -121,14 +137,18 @@ body {
   margin-left: 100px;
   margin-right: 80px;
   padding-bottom: 150px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(3, 1fr);
   // grid-template-rows: repeat(2,1fr);
   gap: 71px 20px;
 }
 
 .photo {
   margin: unset;
+  width: 33%;
   width: 350px;
   height: 300px;
   &-picture {
