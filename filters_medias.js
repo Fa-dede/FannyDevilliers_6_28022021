@@ -1,5 +1,10 @@
 import { globalLikesCounters } from "./likes_counter.js";
 import { addMedias } from "./medias_elements.js";
+import {
+  displayOpenedMenu,
+  hideOpenedMenu,
+  changeOrderTextInOpenedButtonFilter,
+} from "./filters_button_shaping.js";
 
 const selectFilter = (
   medias,
@@ -15,8 +20,15 @@ const selectFilter = (
   let mediasArrayFilteredByDates = [];
   let mediasArrayFilteredByPopularity = [];
   let mediasArrayFilteredByTitle = [];
+  let buttonFilterClosed = document.querySelector("#button-filter");
+  let buttonFilterOpened = document.querySelector("#button-filter-opened");
+
+  displayOpenedMenu(buttonFilterClosed, buttonFilterOpened);
 
   document.querySelector("#date-button").addEventListener("click", (e) => {
+    hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
+    changeOrderTextInOpenedButtonFilter(e);
+
     if (!dateButtonSelected) {
       mediasArrayFilteredByDates = medias.sort((a, b) => {
         return new Date(a.date) - new Date(b.date);
@@ -34,6 +46,9 @@ const selectFilter = (
   document
     .querySelector("#popularity-button")
     .addEventListener("click", (e) => {
+      hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
+      changeOrderTextInOpenedButtonFilter(e);
+
       if (!popularityButtonSelected) {
         mediasArrayFilteredByPopularity = medias.sort((a, b) => {
           return a.likes - b.likes;
@@ -52,6 +67,8 @@ const selectFilter = (
     });
 
   document.querySelector("#title-button").addEventListener("click", (e) => {
+    hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
+    changeOrderTextInOpenedButtonFilter(e);
     if (!titleButtonSelected) {
       mediasArrayFilteredByTitle = medias.sort((a, b) => {
         return a.title > b.title ? 1 : -1;
