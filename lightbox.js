@@ -52,11 +52,13 @@ class lightbox {
         <img id="image-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].image}">
         `;
         let domCarousel = `
-        <button class="lightbox__prev">Précédent</button>
-        <div id = 'photo-video-container'>
+        <div id = 'container-img-button-lightbox'>
+          <button class="lightbox__prev">Précédent</button>
+          <div id = 'photo-video-container'>
+          </div>
+          <button class="lightbox__next">Suivant</button>
+          <button class="lightbox__close">Fermer</button>
         </div>
-        <button class="lightbox__next">Suivant</button>
-        <button class="lightbox__close">Fermer</button>
         <h4 id="title-of-picture-selected">${arrayOfPictures[i].title}</h4>
         `;
 

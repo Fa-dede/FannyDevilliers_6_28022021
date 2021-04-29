@@ -320,7 +320,7 @@ body {
   color: white;
 }
 
-#container-for-picture-selected {
+#container-img-button-lightbox {
   display: flex;
   z-index: inherit;
   border: none;
@@ -328,15 +328,17 @@ body {
 }
 
 #image-clicked {
-  height: 500px;
+  max-height: 700px;
   text-align: center;
   border-radius: 5px;
+  margin: 0 25px;
 }
 
 #video-clicked {
-  height: 500px;
+  max-height: 700px;
   display: block;
   border-radius: 5px;
+  margin: 0 25px;
 }
 
 .lightbox__next,
@@ -357,12 +359,22 @@ body {
   justify-content: center;
   background: url("../img/cross.svg") no-repeat;
   margin: 5px;
+  margin-top: 10px;
+  margin-left: -10px;
   height: 35px;
   width: 35px;
   text-indent: -8000px;
   position: relative;
   top: 0;
   left: -50px;
+}
+
+#title-of-picture-selected {
+  font-size: 18px;
+  color: #901C1C;
+  margin: unset;
+  margin-top: 10px;
+  margin-left: 75px;
 }
 
 body {
