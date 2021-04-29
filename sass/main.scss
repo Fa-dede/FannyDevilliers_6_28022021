@@ -3,11 +3,11 @@
 @import "./mixins";
 @import "./photographer-page";
 @import "./components";
+@import "./lightbox.scss";
 
 // * {
 //   border: 1px solid grey;
 // }
-
 body {
   @include dm-sans;
 }

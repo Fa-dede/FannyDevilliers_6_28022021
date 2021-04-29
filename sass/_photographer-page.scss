@@ -88,7 +88,6 @@ body {
   text-align: start;
   margin-left: 13px;
   list-style: none;
-  padding-top: 4px;
   i {
     margin: unset;
     display: block;
@@ -107,14 +106,16 @@ body {
   cursor: pointer;
   margin-left: 13px;
   width: 170px;
+  min-height: 60px;
   .fas {
     margin-left: 26px;
   }
   &__opened {
     position: absolute;
+    margin-top: 4px;
     margin-left: 16px;
     z-index: 999;
-    padding: 21px 11px;
+    padding: 18px 11px;
 
     display: none;
     ul {
@@ -140,6 +141,12 @@ body {
       border-top: solid 1px white;
     }
   }
+}
+
+#chevron-up-filter {
+  position: absolute;
+  right: 15px;
+  top: 20px;
 }
 
 .portfolio {
@@ -226,25 +233,6 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-}
-
-#container-for-picture-selected {
-  display: flex;
-  justify-content: center;
-  z-index: inherit;
-  border: solid 1px black;
-  margin: auto;
-}
-
-#image-clicked {
-  width: 50%;
-  // min-height: 400px;
-  display: block;
-}
-
-#video-clicked {
-  width: 80%;
-  display: block;
 }
 
 // #lightbox--close-button {
