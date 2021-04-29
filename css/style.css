@@ -11,10 +11,10 @@ body {
 
 .profile-insert {
   background-color: #fafafa;
-  border-radius: 5px;
+  border-radius: 10px;
   display: grid;
   justify-items: start;
-  grid-template-columns: auto 1fr auto 1fr 1fr;
+  grid-template-columns: auto 1fr auto 5fr 1fr;
   padding-top: 56px;
   padding-left: 50px;
   padding-bottom: 56px;
@@ -53,6 +53,8 @@ body {
   align-self: start;
   color: white;
   padding: 21px 11px;
+  margin-top: 10px;
+  margin-left: 25px;
   font-weight: 700;
   font-size: 20px;
   background-color: #901C1C;
@@ -61,15 +63,25 @@ body {
   cursor: pointer;
 }
 
+#container-portrait {
+  margin: 0 25px 0 50px;
+}
+
 .sort-by {
   margin: 20px 0 58px 100px;
   font-weight: 700;
   font-size: 18px;
+  min-height: 70px;
+}
+
+#sort-by-text {
+  display: inline-block;
+  margin-top: 22px;
 }
 
 #selected-filter {
   text-align: start;
-  margin-left: 20px;
+  margin-left: 13px;
   list-style: none;
   padding-top: 4px;
 }
@@ -96,8 +108,10 @@ body {
 }
 .popularity-button__opened {
   position: absolute;
+  margin-left: 16px;
   z-index: 999;
   padding: 21px 11px;
+  display: none;
 }
 .popularity-button__opened ul {
   margin: unset;
@@ -303,7 +317,7 @@ body {
 .tags {
   display: inline;
   color: #901C1C;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   border: solid 0.5px #C4C4C4;
   border-radius: 11px;
@@ -416,8 +430,8 @@ header a {
   margin-top: 40px;
   margin-bottom: 10px;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.2);
 }
@@ -433,20 +447,20 @@ header a {
 }
 .container-profile__information .location {
   color: #901C1C;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   margin: unset;
 }
 .container-profile__information .quote {
   margin: unset;
   margin-top: 3px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 400;
 }
 .container-profile__information .prices {
   color: #757575;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 12px;
   margin: unset;
   margin-top: 3px;
 }

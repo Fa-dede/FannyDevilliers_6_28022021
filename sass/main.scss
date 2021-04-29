@@ -4,8 +4,8 @@
 @import "./photographer-page";
 @import "./components";
 
-// *{
-//     border: 1px solid grey;
+// * {
+//   border: 1px solid grey;
 // }
 
 body {
@@ -117,8 +117,8 @@ header {
     margin-top: 40px;
     margin-bottom: 10px;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     @include box-shadow;
   }
@@ -134,20 +134,20 @@ header {
 
     .location {
       color: $primary-color;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 400;
       margin: unset;
     }
     .quote {
       margin: unset;
       margin-top: 3px;
-      font-size: 10px;
+      font-size: 13px;
       font-weight: 400;
     }
     .prices {
       color: $prices-color;
       font-weight: 400;
-      font-size: 9px;
+      font-size: 12px;
       margin: unset;
       margin-top: 3px;
     }

@@ -35,7 +35,7 @@ const form_validation = (e) => {
     e.preventDefault();
     document.getElementById("error-message").innerText =
       "Veuillez écrire votre message ";
-    document.getElementById("error-message").style.color = "white";
+    document.getElementById("error-message").style.color = "#1E1E1E";
     inputs.message.focus();
   }
 
@@ -44,7 +44,7 @@ const form_validation = (e) => {
   if (inputs.email.validity.valueMissing) {
     e.preventDefault();
     alerts.email.innerText = "Veuillez saisir votre email ";
-    alerts.email.style.color = "white";
+    alerts.email.style.color = "#1E1E1E";
     inputs.email.focus();
   }
 
@@ -54,7 +54,7 @@ const form_validation = (e) => {
   ) {
     event.preventDefault();
     alerts.email.innerText = "Format incorrect";
-    alerts.email.style.color = "white";
+    alerts.email.style.color = "#1E1E1E";
     inputs.email.focus();
   }
   if (inputs.email.value.match(regexEmail)) {
@@ -66,7 +66,7 @@ const form_validation = (e) => {
   if (inputs.lastName.validity.valueMissing) {
     e.preventDefault();
     alerts.lastName.innerText = "Veuillez saisir votre nom ";
-    alerts.lastName.style.color = "white";
+    alerts.lastName.style.color = "#1E1E1E";
     inputs.lastName.focus();
   }
 
@@ -76,7 +76,7 @@ const form_validation = (e) => {
   ) {
     event.preventDefault();
     alerts.lastName.innerText = "Format incorrect";
-    alerts.lastName.style.color = "white";
+    alerts.lastName.style.color = "#1E1E1E";
     inputs.lastName.focus();
   }
   if (inputs.lastName.value.match(regexNames)) {
@@ -87,7 +87,7 @@ const form_validation = (e) => {
   if (inputs.firstName.validity.valueMissing) {
     e.preventDefault();
     alerts.firstName.innerText = "Veuillez saisir votre prénom ";
-    alerts.firstName.style.color = "white";
+    alerts.firstName.style.color = "#1E1E1E";
     inputs.firstName.focus();
   }
   if (
@@ -96,7 +96,7 @@ const form_validation = (e) => {
   ) {
     event.preventDefault();
     alerts.firstName.innerText = "Format incorrect";
-    alerts.firstName.style.color = "white";
+    alerts.firstName.style.color = "#1E1E1E";
     inputs.firstName.focus();
   }
   if (inputs.firstName.value.match(regexNames)) {

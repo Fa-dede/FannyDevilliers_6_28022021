@@ -1,17 +1,16 @@
-
-.tags{
-    display: inline;
-    color: $primary-color;
-    font-size: 9px;
-    font-weight: 500;
-    border: solid .5px $tags-border-color;
-    border-radius: 11px;
-    padding: 3px 7px 3px 7px;
-    margin-right: 5px;
-    cursor: pointer; 
+.tags {
+  display: inline;
+  color: $primary-color;
+  font-size: 12px;
+  font-weight: 500;
+  border: solid 0.5px $tags-border-color;
+  border-radius: 11px;
+  padding: 3px 7px 3px 7px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
-.tags:hover{
-    background-color: $primary-color;
-    color: white;
+.tags:hover {
+  background-color: $primary-color;
+  color: white;
 }

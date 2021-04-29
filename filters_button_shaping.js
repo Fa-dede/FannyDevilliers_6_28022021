@@ -10,13 +10,13 @@
 
 const displayOpenedMenu = (buttonFilterClosed, buttonFilterOpened) => {
   buttonFilterClosed.addEventListener("click", () => {
-    // buttonFilterClosed.style.display = "none";
+    buttonFilterClosed.style.display = "none";
     buttonFilterOpened.style.display = "inline-block";
   });
 };
 
 const hideOpenedMenu = (buttonFilterClosed, buttonFilterOpened) => {
-  //   buttonFilterOpened.style.display = "none";
+  buttonFilterOpened.style.display = "none";
   buttonFilterClosed.style.display = "inline-block";
 };
 

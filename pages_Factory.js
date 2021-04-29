@@ -48,12 +48,6 @@ class PagesFactory {
           this.photographers,
           this.photographerID
         );
-
-        //LIGHTBOX
-        // this.picturesArray = document.querySelectorAll(".photo-picture");
-        // this.pictures = [...this.picturesArray];
-
-        // new lightbox(this.pictures);
       });
   }
 
