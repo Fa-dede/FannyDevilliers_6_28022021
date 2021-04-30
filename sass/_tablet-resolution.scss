@@ -1,27 +1,25 @@
-@media screen and (max-width: 850px) // tablette
-{
-
-  header{
-      grid-template-areas:
-      "logo title title title " 
+@media screen and (max-width: 850px) {
+  header {
+    grid-template-areas:
+      "logo title title title "
       "navbar navbar navbar navbar";
   }
-    .main-container{
-        grid-template-columns: repeat(2,1fr);
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    article {
+      width: 50%;
     }
+  }
 
-    .title{
-        justify-self: end;
-    }
+  .title {
+    justify-self: end;
+  }
 
-    .navigation-bar{
-        margin-top: 20px;
-    }
+  .navigation-bar {
+    margin-top: 20px;
+  }
 
-
-
-
-
-
-
+  #scroll-to-main-button {
+    left: 35%;
+  }
 }

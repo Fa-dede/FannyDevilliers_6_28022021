@@ -5,7 +5,9 @@
 const addPhotographerCard = (photographer) => {
   photographer.forEach((photographer) => {
     let arrayTags = photographer.tags; // tableaux des tags des photographes
-    let tag = arrayTags.map((tag) => `<li class ='tags'> #${tag} </li>`); // méthode qui permet d'isoler les éléments du tableau + de les incrémenter entre deux balises <li>
+    let tag = arrayTags.map(
+      (tag) => `<li class ='tags' aria-label="tag ${tag}"> #${tag} </li>`
+    ); // méthode qui permet d'isoler les éléments du tableau + de les incrémenter entre deux balises <li>
     let tags = `<ul class='tag-list'> ${tag.join("")} </ul>`;
     // méthode.join('') qui incrémente mes <li> dans une <ul>
     let mainContainer = document.querySelector(".main-container");
@@ -16,7 +18,7 @@ const addPhotographerCard = (photographer) => {
                   <img
                     class="container-profile__picture"
                     src="./img/Portraits/${photographer.portrait}"
-                   alt="${photographer.name}'s profile"
+                   alt="${photographer.name}"
                   />
                 </figure>
       
