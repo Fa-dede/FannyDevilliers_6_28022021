@@ -84,7 +84,7 @@ body {
   margin-left: 13px;
   list-style: none;
 }
-#selected-filter i {
+#selected-filter em {
   margin: unset;
   display: block;
   float: right;
