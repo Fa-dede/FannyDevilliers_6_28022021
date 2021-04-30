@@ -35,6 +35,15 @@ const closeModaleWithMouseout = () => {
   });
 };
 
+//Fermeture de la modale avec la Touche 'ESCAPE'
+const closeModaleOnKeyUp = () => {
+  document.addEventListener("keyup", (e) => {
+    if (e.key == "Escape") {
+      contactContainer.style.display = "none";
+    }
+  });
+};
+
 // comportement à l'intérieur de la modale de contact
 const validation = () => {
   const submit = document.getElementById("submit");
@@ -45,6 +54,7 @@ const modaleBehaviour = (photographers, photographerID) => {
   openModale(photographers, photographerID);
   closeModaleWithCross();
   closeModaleWithMouseout();
+  closeModaleOnKeyUp();
   validation();
 };
 

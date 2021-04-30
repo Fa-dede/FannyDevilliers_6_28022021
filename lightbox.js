@@ -131,7 +131,7 @@ class lightbox {
         if (i == this.arrayOfPictures.length) i = 0;
         this.addContentAfterAction(i, pictures, mediaContainer);
       }
-      if (e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft" || e.key === "Backspace") {
         i--;
         if (i == -1) i = this.arrayOfPictures.length - 1;
         this.addContentAfterAction(i, pictures, mediaContainer);
