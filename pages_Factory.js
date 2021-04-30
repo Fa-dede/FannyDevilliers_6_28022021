@@ -6,6 +6,7 @@ import {
 import { modaleBehaviour } from "./modale_contact.js";
 import { globalLikesCounters } from "./likes_counter.js";
 import { sortByTags } from "./tags_filters.js";
+import { scrollButtonBehavior } from "./scroll-to-main-content.js";
 
 class PagesFactory {
   constructor(photographerID, path) {
@@ -23,6 +24,7 @@ class PagesFactory {
         this.photographers = datas.photographers;
         addPhotographerCard(this.photographers);
         sortByTags();
+        scrollButtonBehavior();
       });
   }
 

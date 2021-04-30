@@ -320,6 +320,23 @@ body {
   color: white;
 }
 
+#scroll-to-main-button {
+  display: none;
+  font-weight: 700;
+  font-size: 18px;
+  width: 182px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  margin: auto;
+  background-color: #DB8876;
+  border-radius: 5px;
+  padding: 6px 8px;
+  cursor: pointer;
+  position: fixed;
+  left: 44%;
+}
+
 #container-img-button-lightbox {
   display: flex;
   z-index: inherit;
@@ -404,19 +421,6 @@ header a {
 
 #logo-full {
   display: none;
-}
-
-#scroll-to-main-button {
-  display: none;
-  font-weight: 700;
-  font-size: 18px;
-  width: 182px;
-  text-align: center;
-  margin: auto;
-  background-color: #DB8876;
-  border-radius: 5px;
-  padding: 6px 8px;
-  cursor: pointer;
 }
 
 .navigation-bar {

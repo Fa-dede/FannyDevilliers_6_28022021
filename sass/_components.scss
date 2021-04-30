@@ -14,3 +14,21 @@
   background-color: $primary-color;
   color: white;
 }
+
+#scroll-to-main-button {
+  display: none;
+  font-weight: 700;
+  font-size: 18px;
+  width: 182px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  // display: block;
+  margin: auto;
+  background-color: $scroll-top-button-background;
+  border-radius: 5px;
+  padding: 6px 8px;
+  cursor: pointer;
+  position: fixed;
+  left: 44%;
+}

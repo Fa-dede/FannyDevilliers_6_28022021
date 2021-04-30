@@ -45,8 +45,8 @@ const closeModaleOnKeyUp = () => {
 };
 
 // comportement à l'intérieur de la modale de contact
-const validation = () => {
-  const submit = document.getElementById("submit");
+const validate = () => {
+  let submit = document.getElementById("submit");
   submit.addEventListener("click", form_validation);
 };
 
@@ -55,7 +55,7 @@ const modaleBehaviour = (photographers, photographerID) => {
   closeModaleWithCross();
   closeModaleWithMouseout();
   closeModaleOnKeyUp();
-  validation();
+  validate();
 };
 
-export { modaleBehaviour };
+export { modaleBehaviour, validate };
