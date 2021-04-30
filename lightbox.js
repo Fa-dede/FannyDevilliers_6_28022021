@@ -32,6 +32,7 @@ class lightbox {
     mediaContainer
   ) {
     this.closeLightboxContainer(lightbox, containerForPictureSelected);
+    // this.playOrPauseMediaOnKeyUp(i, pictures);
 
     medias.forEach((media) => {
       if (media.photographerId == photographerID) {
@@ -54,8 +55,7 @@ class lightbox {
         let domCarousel = `
         <div id = 'container-img-button-lightbox'>
           <button class="lightbox__prev">Précédent</button>
-          <div id = 'photo-video-container'>
-          </div>
+          <div id = 'photo-video-container'> </div>
           <button class="lightbox__next">Suivant</button>
           <button class="lightbox__close">Fermer</button>
         </div>
@@ -120,15 +120,51 @@ class lightbox {
       if (i == -1) i = this.arrayOfPictures.length - 1;
       this.addContentAfterAction(i, pictures, mediaContainer);
     });
+
+    this.nextAndPrevPictureOnKeyUp(i, pictures, mediaContainer);
+  }
+
+  nextAndPrevPictureOnKeyUp(i, pictures, mediaContainer) {
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "ArrowRight") {
+        i++;
+        if (i == this.arrayOfPictures.length) i = 0;
+        this.addContentAfterAction(i, pictures, mediaContainer);
+      }
+      if (e.key === "ArrowLeft") {
+        i--;
+        if (i == -1) i = this.arrayOfPictures.length - 1;
+        this.addContentAfterAction(i, pictures, mediaContainer);
+      }
+    });
   }
 
   closeCarousel() {
+    this.closeCarouselOnKeyUp();
     let buttonClose = document.querySelector(".lightbox__close");
     buttonClose.addEventListener("click", () => {
       this.lightbox.innerHTML = "";
       this.lightbox.style.display = "none";
     });
   }
+
+  closeCarouselOnKeyUp() {
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "Escape") {
+        this.lightbox.innerHTML = "";
+        this.lightbox.style.display = "none";
+      }
+    });
+  }
+
+  // playOrPauseMediaOnKeyUp(i, pictures) {
+  //   document.addEventListener("keyup", (e) => {
+  //     if (e.key == "Enter") {
+  //       console.log("enter");
+  //       console.log(pictures[i]);
+  //     }
+  //   });
+  // }
 }
 
 export { lightbox };
