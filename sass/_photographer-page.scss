@@ -20,7 +20,7 @@ body {
   padding-left: 50px;
   padding-bottom: 56px;
   padding-right: 50px;
-  margin: 0 100px 0 100px;
+  margin: 0 50px;
 
   .information-container {
     grid-column: 1/2;
@@ -35,6 +35,7 @@ body {
     &__name {
       margin-bottom: 20px;
       font-size: 64px;
+      min-width: 300px;
     }
     &__information {
       margin-bottom: 20px;
@@ -64,8 +65,14 @@ body {
       border-style: unset;
       border-radius: 5px;
       cursor: pointer;
+      min-width: 160px;
+      text-align: center;
     }
   }
+}
+
+#tag-list {
+  position: absolute;
 }
 
 #container-portrait {
@@ -154,8 +161,8 @@ body {
 }
 
 .portfolio--photo-container {
-  margin-left: 100px;
-  margin-right: 80px;
+  // margin-left: 100px;
+  // margin-right: 80px;
   padding-bottom: 150px;
   display: flex;
   align-content: space-around;

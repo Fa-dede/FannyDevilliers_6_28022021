@@ -1,4 +1,4 @@
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 940px) {
   header {
     grid-template-areas:
       "logo title title title "
@@ -80,10 +80,6 @@
   }
 
   //MODALE
-
-  #container-modale {
-    margin-left: -50px;
-  }
   #modale {
     width: 60%;
   }

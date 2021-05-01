@@ -25,6 +25,7 @@
   width: 50px;
   text-indent: -8000px;
   border: none;
+  cursor: pointer;
 }
 
 .lightbox__prev {
@@ -45,6 +46,7 @@
   position: relative;
   top: 0;
   left: -50px;
+  cursor: pointer;
 }
 
 #title-of-picture-selected {

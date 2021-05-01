@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 689px) {
   //INDEX
   body {
     margin: unset;
@@ -53,6 +53,7 @@
 
   #photographer-name {
     font-size: 39px;
+    min-width: unset;
     width: 210px;
     margin: unset;
     margin-bottom: -5px;
