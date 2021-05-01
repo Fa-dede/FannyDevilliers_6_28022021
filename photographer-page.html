@@ -29,7 +29,6 @@
           name="contact"
           action="photographer-page.html"
           method="GET"
-          onsubmit= "validate()" 
         >
           <div id="input-first" class="form-data">
             <label for="first">Prénom</label>
@@ -83,6 +82,7 @@
             ></textarea>
             <span class="error" id="error-message"></span>
           </div>
+          <input type="hidden" name="id" id="inputIdPhotographer">
           <input
             id="submit"
             class="btn-submit button"

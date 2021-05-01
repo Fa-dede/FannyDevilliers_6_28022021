@@ -2,6 +2,7 @@
   //INDEX
   body {
     margin: unset;
+    overflow-x: hidden;
   }
   .main-container {
     grid-template-columns: 1fr;
@@ -45,24 +46,26 @@
     padding: unset;
     padding: 0 20px;
     margin: unset;
-    width: 100%;
+    // width: 100%;
   }
 
   #photographer-name {
     font-size: 39px;
-    min-width: 170px;
+    width: 210px;
     margin: unset;
     margin-bottom: -5px;
   }
 
-  .container-profile__picture {
+  #portrait {
+    width: inherit;
+    height: inherit;
+  }
+
+  #container-portrait {
     width: 100px;
     height: 100px;
     margin: unset;
     box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 10%);
-  }
-
-  #container-portrait {
     margin: unset;
     position: relative;
     right: 80px;
@@ -102,12 +105,14 @@
     }
   }
 
-  #contact {
-    display: none;
+  .profile-insert .container-profile__button {
+    // display: block;
     position: fixed;
-    z-index: 99999;
-    width: 170px;
-    height: 15px;
+    left: 25%;
+    bottom: 20px;
+    margin: unset;
+    padding: 10px;
+    z-index: 999;
   }
 
   .static-insert {
@@ -131,6 +136,10 @@
     height: 200px;
     margin-bottom: -20px;
   }
+
+  .portfolio--photo-container {
+    padding-bottom: unset;
+  }
   .photo-picture {
     height: 200px;
     width: inherit;
@@ -148,5 +157,45 @@
       margin-top: 5px;
       font-size: 17px;
     }
+  }
+
+  // Modal de contact
+  #modale {
+    margin-top: 40px;
+    height: 100%;
+    width: 90%;
+    position: fixed;
+    padding: 20px;
+    padding-right: 30px;
+    border-radius: 10px;
+    overflow-x: scroll;
+  }
+
+  #modal-form #submit {
+    padding: 5px 50px;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+
+  //Lightbox
+
+  #photo-video-container {
+    width: 100%;
+  }
+
+  #image-clicked,
+  #video-clicked {
+    width: inherit;
+    margin: unset;
+  }
+
+  .lightbox__close {
+    margin: unset;
+    left: -20px;
+  }
+  #title-of-picture-selected {
+    margin-left: 40px;
+    font-weight: 400;
   }
 }

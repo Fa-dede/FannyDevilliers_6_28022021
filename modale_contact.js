@@ -16,6 +16,9 @@ const openModale = (photographers, photographerID) => {
         ).innerHTML = `${photographer.name}`;
       }
     });
+
+    // Ajout de l'id dans l'input hidden afin d'effectuer une redirection correcte
+    document.querySelector("#inputIdPhotographer").value = photographerID;
   });
 };
 
@@ -45,9 +48,11 @@ const closeModaleOnKeyUp = () => {
 };
 
 // comportement à l'intérieur de la modale de contact
-const validate = () => {
-  let submit = document.getElementById("submit");
-  submit.addEventListener("click", form_validation);
+const validate = (photographerID) => {
+  document
+    .querySelector("#modal-form")
+    .addEventListener("submit", form_validation);
+  console.log(photographerID);
 };
 
 const modaleBehaviour = (photographers, photographerID) => {
@@ -55,7 +60,7 @@ const modaleBehaviour = (photographers, photographerID) => {
   closeModaleWithCross();
   closeModaleWithMouseout();
   closeModaleOnKeyUp();
-  validate();
+  validate(photographerID);
 };
 
-export { modaleBehaviour, validate };
+export { modaleBehaviour };
