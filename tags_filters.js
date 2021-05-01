@@ -16,7 +16,7 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
     tagName = tagName.toLowerCase();
 
     tagButton.addEventListener("click", (e) => {
-      //   e.target.classList.add("active");
+      // e.target.classList.add("active");
 
       photographerProfile.forEach((profile) => {
         profile.style.display = "none";
@@ -25,6 +25,18 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
           profile.style.display = "block";
         }
       });
+    });
+
+    tagButton.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        photographerProfile.forEach((profile) => {
+          profile.style.display = "none";
+
+          if (profile.innerHTML.includes(tagName)) {
+            profile.style.display = "block";
+          }
+        });
+      }
     });
   }
 };
