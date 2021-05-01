@@ -35,7 +35,7 @@
 
   .profile-insert {
     margin: unset;
-    width: 100%;
+    // width: 100%;
     min-height: 250px;
   }
 
@@ -90,8 +90,44 @@
 
   //Lightbox
 
-  #image-clicked {
-    width: 80%;
+  #lightbox {
+    overflow-x: hidden;
+  }
+
+  #photo-video-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  #container-img-button-lightbox {
+    text-align: center;
+    width: 100%;
+  }
+
+  #container-for-picture-selected {
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+  }
+  #image-clicked,
+  #video-clicked {
+    max-width: 100%;
+    height: auto;
     margin: unset;
+  }
+
+  #title-of-picture-selected {
+    font-weight: 400;
+    font-size: 26px;
+    margin-left: unset;
+    margin-left: 40px;
+  }
+
+  .lightbox__close {
+    left: -20px;
+  }
+
+  .container {
+    overflow-x: hidden;
   }
 }

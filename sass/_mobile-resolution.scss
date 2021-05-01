@@ -47,6 +47,7 @@
     padding: unset;
     padding: 0 20px;
     margin: unset;
+    min-height: unset;
     // width: 100%;
   }
 
@@ -69,7 +70,7 @@
     box-shadow: 0px 0px 12px 7px rgb(0 0 0 / 10%);
     margin: unset;
     position: relative;
-    right: 80px;
+    right: 30px;
     bottom: 10px;
   }
 
@@ -196,10 +197,20 @@
   .lightbox__close {
     margin: unset;
     left: -20px;
+    transform: scale(0.5);
   }
+
+  .lightbox__next {
+    transform: scale(0.5);
+  }
+  .lightbox__prev {
+    transform: scale(0.5) rotate(180deg);
+  }
+
   #title-of-picture-selected {
     margin-left: 40px;
     font-weight: 400;
+    font-size: unset;
   }
 
   .container {

@@ -559,7 +559,6 @@ ul {
 
   .profile-insert {
     margin: unset;
-    width: 100%;
     min-height: 250px;
   }
 
@@ -611,9 +610,46 @@ ul {
     width: 60%;
   }
 
-  #image-clicked {
-    width: 80%;
+  #lightbox {
+    overflow-x: hidden;
+  }
+
+  #photo-video-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  #container-img-button-lightbox {
+    text-align: center;
+    width: 100%;
+  }
+
+  #container-for-picture-selected {
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  #image-clicked,
+#video-clicked {
+    max-width: 100%;
+    height: auto;
     margin: unset;
+  }
+
+  #title-of-picture-selected {
+    font-weight: 400;
+    font-size: 26px;
+    margin-left: unset;
+    margin-left: 40px;
+  }
+
+  .lightbox__close {
+    left: -20px;
+  }
+
+  .container {
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 600px) {
@@ -661,6 +697,7 @@ ul {
     padding: unset;
     padding: 0 20px;
     margin: unset;
+    min-height: unset;
   }
 
   #photographer-name {
@@ -682,7 +719,7 @@ ul {
     box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.1);
     margin: unset;
     position: relative;
-    right: 80px;
+    right: 30px;
     bottom: 10px;
   }
 
@@ -807,11 +844,21 @@ ul {
   .lightbox__close {
     margin: unset;
     left: -20px;
+    transform: scale(0.5);
+  }
+
+  .lightbox__next {
+    transform: scale(0.5);
+  }
+
+  .lightbox__prev {
+    transform: scale(0.5) rotate(180deg);
   }
 
   #title-of-picture-selected {
     margin-left: 40px;
     font-weight: 400;
+    font-size: unset;
   }
 
   .container {
