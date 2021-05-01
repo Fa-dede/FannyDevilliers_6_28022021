@@ -4,6 +4,7 @@
       "logo title title title "
       "navbar navbar navbar navbar";
   }
+
   .main-container {
     grid-template-columns: repeat(2, 1fr);
     article {
@@ -21,5 +22,76 @@
 
   #scroll-to-main-button {
     left: 35%;
+  }
+
+  // Photographer Page
+
+  .header-pages {
+    margin: unset;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .profile-insert {
+    margin: unset;
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .container-profile__picture {
+    width: 200px;
+    height: 200px;
+  }
+
+  #container-portrait {
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+  }
+
+  #tag-list {
+    position: absolute;
+    margin-right: 20px;
+  }
+
+  .profile-insert .container-profile__button {
+    position: absolute;
+    right: 50px;
+    top: 400px;
+  }
+
+  .sort-by {
+    margin: unset;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio--photo-container {
+    margin: unset;
+  }
+
+  .static-insert {
+    top: 0;
+    bottom: unset;
+    right: 100px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  //MODALE
+
+  #container-modale {
+    margin-left: -50px;
+  }
+  #modale {
+    width: 60%;
+  }
+
+  //Lightbox
+
+  #image-clicked {
+    width: 80%;
+    margin: unset;
   }
 }

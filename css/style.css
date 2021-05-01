@@ -549,6 +549,72 @@ ul {
   #scroll-to-main-button {
     left: 35%;
   }
+
+  .header-pages {
+    margin: unset;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .profile-insert {
+    margin: unset;
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .container-profile__picture {
+    width: 200px;
+    height: 200px;
+  }
+
+  #container-portrait {
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+  }
+
+  #tag-list {
+    position: absolute;
+    margin-right: 20px;
+  }
+
+  .profile-insert .container-profile__button {
+    position: absolute;
+    right: 50px;
+    top: 400px;
+  }
+
+  .sort-by {
+    margin: unset;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio--photo-container {
+    margin: unset;
+  }
+
+  .static-insert {
+    top: 0;
+    bottom: unset;
+    right: 100px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  #container-modale {
+    margin-left: -50px;
+  }
+
+  #modale {
+    width: 60%;
+  }
+
+  #image-clicked {
+    width: 80%;
+    margin: unset;
+  }
 }
 @media screen and (max-width: 600px) {
   body {
@@ -558,6 +624,7 @@ ul {
 
   .main-container {
     grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
 
   header {
@@ -582,7 +649,6 @@ ul {
 
   #scroll-to-main-button {
     position: relative;
-    right: -8000px;
   }
 
   .header-pages {
@@ -654,12 +720,15 @@ ul {
   }
 
   .profile-insert .container-profile__button {
+    display: block;
     position: fixed;
     left: 25%;
     bottom: 20px;
     margin: unset;
     padding: 10px;
     z-index: 999;
+    top: unset;
+    right: unset;
   }
 
   .static-insert {
@@ -743,6 +812,10 @@ ul {
   #title-of-picture-selected {
     margin-left: 40px;
     font-weight: 400;
+  }
+
+  .container {
+    overflow-x: hidden;
   }
 }
 
