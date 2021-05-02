@@ -49,10 +49,10 @@ const closeModaleOnKeyUp = () => {
 
 // comportement à l'intérieur de la modale de contact
 const validate = (photographerID) => {
+  document.querySelector("#submit").addEventListener("click", form_validation);
   document
     .querySelector("#modal-form")
     .addEventListener("submit", form_validation);
-  console.log(photographerID);
 };
 
 const modaleBehaviour = (photographers, photographerID) => {

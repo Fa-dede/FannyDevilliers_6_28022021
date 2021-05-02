@@ -18,6 +18,11 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
   if (tagButton.innerHTML.includes(tagName)) {
     tagName = tagName.toLowerCase();
 
+    /**
+     *
+     * @param {target} e =  button targeted
+     */
+
     const filterTagsAbleAndDisable = (e) => {
       // Pour tous les tags : si le tag a la classe Active alors supprime sa classe active
       tagsArray.forEach((tag) => {
@@ -38,6 +43,7 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
         });
       }
 
+      //Stylise le bouton de tag associé au profil du photographe
       tagForEachPhotographer.forEach((tag) => {
         if (tag.innerHTML.includes(tagName)) {
           tag.classList.add("active");
@@ -45,16 +51,27 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
       });
     };
 
+    /**
+     * Supprime la Mise En Forme du bouton tag associé au photographe
+     */
     const removeTagSelectedForEachPhotographer = () => {
       tagForEachPhotographer.forEach((tag) => {
         tag.classList.remove("active");
       });
     };
 
+    /**
+     * Evenement au clic sur le bouton TAG de la NAV BAR
+     */
+
     tagButton.addEventListener("click", (e) => {
       removeTagSelectedForEachPhotographer();
       filterTagsAbleAndDisable(e);
     });
+
+    /**
+     * Evenement au clavier sur le bouton TAG de la NAV BAR
+     */
 
     tagButton.addEventListener("keyup", (e) => {
       if (e.key === "Enter") {

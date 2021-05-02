@@ -54,11 +54,14 @@ const form_validation = (e) => {
   ) {
     event.preventDefault();
     alerts.email.innerText = "Format incorrect";
-    alerts.email.style.color = "#1E1E1E";
+    document.querySelector("#email").style.color = "#BA0619";
+    document.querySelector("#email").style.fontWeight = "bold";
     inputs.email.focus();
   }
   if (inputs.email.value.match(regexEmail)) {
     alerts.email.innerText = "";
+    document.querySelector("#email").style.color = "";
+    document.querySelector("#email").style.fontWeight = "400";
   }
 
   // Validation du Nom de Famille
@@ -77,10 +80,14 @@ const form_validation = (e) => {
     event.preventDefault();
     alerts.lastName.innerText = "Format incorrect";
     alerts.lastName.style.color = "#1E1E1E";
+    document.querySelector("#last").style.color = "#BA0619";
+    document.querySelector("#last").style.fontWeight = "bold";
     inputs.lastName.focus();
   }
   if (inputs.lastName.value.match(regexNames)) {
     alerts.lastName.innerText = "";
+    document.querySelector("#last").style.color = "#000";
+    document.querySelector("#last").style.fontWeight = "400";
   }
   // Validation du prénom
 
@@ -96,11 +103,15 @@ const form_validation = (e) => {
   ) {
     event.preventDefault();
     alerts.firstName.innerText = "Format incorrect";
+    document.querySelector("#first").style.color = "#BA0619";
+    document.querySelector("#first").style.fontWeight = "bold";
     alerts.firstName.style.color = "#1E1E1E";
     inputs.firstName.focus();
   }
   if (inputs.firstName.value.match(regexNames)) {
     alerts.firstName.innerText = "";
+    document.querySelector("#first").style.color = "#000";
+    document.querySelector("#first").style.fontWeight = "400";
   }
 };
 
