@@ -26,19 +26,11 @@ const changeTextOfFilterButton = (e, textOfTargetedLi) => {
 
 const changeOrderTextInOpenedButtonFilter = (e) => {
   let arrayOfLi = [...document.querySelectorAll("#ul-filters-list li")];
-  let ulFilterList = [document.querySelector("#ul-filters-list")];
-  console.log(ulFilterList);
   for (let i = 0; i < arrayOfLi.length; i++) {
     if (arrayOfLi[i] === e.target) {
       //Change texte dans le bouton fermé
       let textOfTargetedLi = arrayOfLi[i].innerHTML;
       changeTextOfFilterButton(e, textOfTargetedLi);
-      //Change ordre des boutons dans bouton ouvert
-      if (i === 1) {
-        console.log("2nd place");
-        arrayOfLi[i] = arrayOfLi[i - 1];
-        console.log(arrayOfLi[i]);
-      }
     }
   }
 };

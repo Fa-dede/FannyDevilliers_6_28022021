@@ -25,6 +25,9 @@ body {
   grid-column: 1/2;
   grid-row: 1;
 }
+.profile-insert #portrait {
+  box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.1);
+}
 .profile-insert .container-profile__picture {
   grid-column: 5;
   margin: unset;
@@ -75,7 +78,7 @@ body {
 }
 
 .sort-by {
-  margin: 20px 0 58px 100px;
+  margin: 20px 0 58px 60px;
   font-weight: 700;
   font-size: 18px;
   min-height: 70px;
@@ -154,10 +157,11 @@ body {
 }
 
 .portfolio--photo-container {
+  margin-left: 60px;
+  margin-right: 50px;
   padding-bottom: 150px;
   display: flex;
-  align-content: space-around;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 71px 20px;
 }
@@ -212,20 +216,13 @@ body {
   margin-right: 67px;
 }
 
-.lightbox__loader {
-  width: 38px;
-  height: 38px;
-  opacity: 0.5;
-  background: url(../img/loader.svg) center center no-repeat;
-}
-
 #lightbox {
   position: fixed;
   z-index: 999;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: rgba(196, 196, 196, 0.8);
   display: none;
   justify-content: center;
   align-items: center;
@@ -247,6 +244,7 @@ body {
 #modale {
   background-color: #DB8876;
   width: 40%;
+  max-width: 500px;
   height: auto;
   border-radius: 5px;
   padding: 15px 35px 15px 35px;
@@ -485,7 +483,7 @@ header a {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.2);
 }
 .container-profile__name {
   grid-area: names;
@@ -595,6 +593,7 @@ ul {
 
   .portfolio--photo-container {
     margin: unset;
+    justify-content: center;
   }
 
   .static-insert {
@@ -607,45 +606,65 @@ ul {
   #modale {
     width: 60%;
   }
-
+}
+@media screen and (max-width: 940px) and (max-height: 375px) {
+  #modale {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 940px) {
   #lightbox {
     overflow-x: hidden;
+    height: 100%;
   }
-
+}
+@media screen and (max-width: 940px) {
   #photo-video-container {
     width: 100%;
-    text-align: center;
   }
-
+}
+@media screen and (max-width: 940px) {
   #container-img-button-lightbox {
     text-align: center;
     width: 100%;
   }
-
+}
+@media screen and (max-width: 940px) {
   #container-for-picture-selected {
     display: block;
     width: 100%;
     margin-left: 20px;
   }
-
+}
+@media screen and (max-width: 940px) {
   #image-clicked,
 #video-clicked {
     max-width: 100%;
-    height: auto;
     margin: unset;
   }
-
+}
+@media screen and (max-width: 940px) and (max-height: 375px) {
+  #image-clicked,
+#video-clicked {
+    max-height: 290px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 940px) {
   #title-of-picture-selected {
     font-weight: 400;
     font-size: 26px;
-    margin-left: unset;
     margin-left: 40px;
   }
-
+}
+@media screen and (max-width: 940px) {
   .lightbox__close {
     left: -20px;
   }
-
+}
+@media screen and (max-width: 940px) {
   .container {
     overflow-x: hidden;
   }

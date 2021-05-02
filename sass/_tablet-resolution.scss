@@ -70,6 +70,7 @@
 
   .portfolio--photo-container {
     margin: unset;
+    justify-content: center;
   }
 
   .static-insert {
@@ -84,15 +85,23 @@
     width: 60%;
   }
 
+  @media screen and (max-height: 375px) {
+    #modale {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+
   //Lightbox
 
   #lightbox {
     overflow-x: hidden;
+    height: 100%;
   }
 
   #photo-video-container {
     width: 100%;
-    text-align: center;
   }
 
   #container-img-button-lightbox {
@@ -108,14 +117,19 @@
   #image-clicked,
   #video-clicked {
     max-width: 100%;
-    height: auto;
     margin: unset;
+  }
+  @media screen and (max-height: 375px) {
+    #image-clicked,
+    #video-clicked {
+      max-height: 290px;
+      margin: auto;
+    }
   }
 
   #title-of-picture-selected {
     font-weight: 400;
     font-size: 26px;
-    margin-left: unset;
     margin-left: 40px;
   }
 

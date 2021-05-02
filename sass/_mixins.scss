@@ -1,7 +1,11 @@
 @mixin dm-sans {
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 @mixin box-shadow {
-    box-shadow: 0px 0px 12px 7px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.2);
+}
+
+@mixin box-shadow-for-profile {
+  box-shadow: 0px 0px 30px 7px rgba(0, 0, 0, 0.1);
 }
