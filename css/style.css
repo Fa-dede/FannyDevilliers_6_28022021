@@ -451,7 +451,8 @@ header a {
   margin-right: 5px;
   cursor: pointer;
 }
-.navigation-bar .active {
+
+.active {
   background-color: #901C1C;
   color: white;
 }

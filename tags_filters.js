@@ -12,23 +12,23 @@ const sortByTags = () => {
 };
 
 const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
+  let tagForEachPhotographer = document.querySelectorAll(
+    ".container-profile .tags"
+  );
   if (tagButton.innerHTML.includes(tagName)) {
     tagName = tagName.toLowerCase();
 
-    tagButton.addEventListener("click", (e) => {
-      // e.target.classList.add("active");
-
-      photographerProfile.forEach((profile) => {
-        profile.style.display = "none";
-
-        if (profile.innerHTML.includes(tagName)) {
-          profile.style.display = "block";
+    const filterTagsAbleAndDisable = (e) => {
+      // Pour tous les tags : si le tag a la classe Active alors supprime sa classe active
+      tagsArray.forEach((tag) => {
+        if (tag.classList[2] == "active") {
+          tag.classList.remove("active");
         }
       });
-    });
 
-    tagButton.addEventListener("keyup", (e) => {
-      if (e.key === "Enter") {
+      // Si le tag cible est INACTIF alors rend le ACTIF
+      if (!e.target.classList[2]) {
+        e.target.classList.add("active");
         photographerProfile.forEach((profile) => {
           profile.style.display = "none";
 
@@ -36,6 +36,30 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
             profile.style.display = "block";
           }
         });
+      }
+
+      tagForEachPhotographer.forEach((tag) => {
+        if (tag.innerHTML.includes(tagName)) {
+          tag.classList.add("active");
+        }
+      });
+    };
+
+    const removeTagSelectedForEachPhotographer = () => {
+      tagForEachPhotographer.forEach((tag) => {
+        tag.classList.remove("active");
+      });
+    };
+
+    tagButton.addEventListener("click", (e) => {
+      removeTagSelectedForEachPhotographer();
+      filterTagsAbleAndDisable(e);
+    });
+
+    tagButton.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        removeTagSelectedForEachPhotographer();
+        filterTagsAbleAndDisable(e);
       }
     });
   }
