@@ -319,11 +319,6 @@ body {
   margin-right: 5px;
 }
 
-.tags:hover {
-  background-color: #901C1C;
-  color: white;
-}
-
 #scroll-to-main-button {
   display: none;
   font-weight: 700;

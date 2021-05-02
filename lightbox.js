@@ -40,7 +40,7 @@ class lightbox {
       }
     });
     for (let i = 0; i < pictures.length; i++) {
-      pictures[i].addEventListener("click", () => {
+      const openLightbox = () => {
         containerForPictureSelected = document.createElement("div");
         containerForPictureSelected.id = "container-for-picture-selected";
         lightbox.appendChild(containerForPictureSelected);
@@ -74,6 +74,14 @@ class lightbox {
 
         this.nextAndPreviousAction(pictures, i, mediaContainer);
         this.closeCarousel();
+      };
+
+      pictures[i].addEventListener("click", () => {
+        openLightbox();
+      });
+
+      pictures[i].addEventListener("keyup", (e) => {
+        if (e.key === "Enter") openLightbox();
       });
     }
   }
@@ -156,15 +164,6 @@ class lightbox {
       }
     });
   }
-
-  // playOrPauseMediaOnKeyUp(i, pictures) {
-  //   document.addEventListener("keyup", (e) => {
-  //     if (e.key == "Enter") {
-  //       console.log("enter");
-  //       console.log(pictures[i]);
-  //     }
-  //   });
-  // }
 }
 
 export { lightbox };

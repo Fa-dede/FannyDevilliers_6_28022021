@@ -67,6 +67,11 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
     tagButton.addEventListener("click", (e) => {
       removeTagSelectedForEachPhotographer();
       filterTagsAbleAndDisable(e);
+      if (e.target.innerHTML === "#All") {
+        photographerProfile.forEach((profile) => {
+          profile.style.display = "block";
+        });
+      }
     });
 
     /**
@@ -77,6 +82,11 @@ const sortByTagName = (tagName, tagButton, photographerProfile, tagsArray) => {
       if (e.key === "Enter") {
         removeTagSelectedForEachPhotographer();
         filterTagsAbleAndDisable(e);
+        if (e.target.innerHTML === "#All") {
+          photographerProfile.forEach((profile) => {
+            profile.style.display = "block";
+          });
+        }
       }
     });
   }

@@ -6,6 +6,15 @@ import {
   changeOrderTextInOpenedButtonFilter,
 } from "./filters_button_shaping.js";
 
+/**
+ *
+ * @param {array} medias
+ * @param {array} filter
+ * @param {array} photographers
+ * @param {number} photographerID
+ * @param {array} picturesArray
+ */
+
 const selectFilter = (
   medias,
   filter,
@@ -25,7 +34,15 @@ const selectFilter = (
 
   displayOpenedMenu(buttonFilterClosed, buttonFilterOpened);
 
-  document.querySelector("#date-button").addEventListener("click", (e) => {
+  let buttonDate = document.querySelector("#date-button");
+  let buttonPopularity = document.querySelector("#popularity-button");
+  let buttonTitle = document.querySelector("#title-button");
+
+  /**FILTRER PAR DATE SOURIS / CLAVIER
+   *
+   * @param {e} e = button de la date
+   */
+  const filterByDate = (e) => {
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
     changeOrderTextInOpenedButtonFilter(e);
 
@@ -41,32 +58,59 @@ const selectFilter = (
     titleButtonSelected = false;
     popularityButtonSelected = false;
     new globalLikesCounters(filter, photographers, photographerID);
+  };
+
+  // EVENEMENT SOURIS
+  buttonDate.addEventListener("click", (e) => {
+    filterByDate(e);
   });
 
-  document
-    .querySelector("#popularity-button")
-    .addEventListener("click", (e) => {
-      hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
-      changeOrderTextInOpenedButtonFilter(e);
+  //EVENEMENT CLAVIER
+  buttonDate.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") filterByDate(e);
+  });
 
-      if (!popularityButtonSelected) {
-        mediasArrayFilteredByPopularity = medias.sort((a, b) => {
-          return a.likes - b.likes;
-        });
-        filter = mediasArrayFilteredByPopularity;
-        if (filter === mediasArrayFilteredByPopularity) {
-          filter = filter.reverse();
-          document.querySelector("#portfolio").innerHTML = "";
-          addMedias(filter, photographers, photographerID);
-        }
-        popularityButtonSelected = true;
-        titleButtonSelected = false;
-        dateButtonSelected = false;
-        new globalLikesCounters(filter, photographers, photographerID);
+  /** FILTRE PAR POPULARITE SOURIS / CLAVIER
+   *
+   * @param {e} e = button Popularité
+   */
+  const filterByPopularity = (e) => {
+    hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
+    changeOrderTextInOpenedButtonFilter(e);
+
+    if (!popularityButtonSelected) {
+      mediasArrayFilteredByPopularity = medias.sort((a, b) => {
+        return a.likes - b.likes;
+      });
+      filter = mediasArrayFilteredByPopularity;
+      if (filter === mediasArrayFilteredByPopularity) {
+        filter = filter.reverse();
+        document.querySelector("#portfolio").innerHTML = "";
+        addMedias(filter, photographers, photographerID);
       }
-    });
+      popularityButtonSelected = true;
+      titleButtonSelected = false;
+      dateButtonSelected = false;
+      new globalLikesCounters(filter, photographers, photographerID);
+    }
+  };
 
-  document.querySelector("#title-button").addEventListener("click", (e) => {
+  // EVENEMENT SOURIS
+  buttonPopularity.addEventListener("click", (e) => {
+    filterByPopularity(e);
+  });
+
+  // EVENEMENT CLAVIER
+  buttonPopularity.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") filterByPopularity(e);
+  });
+
+  /** FILTRE PAR TITRE SOURIS / CLAVIER
+   *
+   * @param {e} e = button Titre
+   */
+
+  const filterByTitle = (e) => {
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
     changeOrderTextInOpenedButtonFilter(e);
     if (!titleButtonSelected) {
@@ -83,6 +127,14 @@ const selectFilter = (
       popularityButtonSelected = false;
       new globalLikesCounters(filter, photographers, photographerID);
     }
+  };
+
+  buttonTitle.addEventListener("click", (e) => {
+    filterByTitle(e);
+  });
+
+  buttonTitle.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") filterByTitle(e);
   });
 };
 

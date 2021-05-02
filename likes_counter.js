@@ -64,9 +64,11 @@ class globalLikesCounters {
    */
   addAsFavorite(arrayOfHearts) {
     let likesPerPage = this.likesPerPage; // déclare la variable pour qu'elle fasse référence à this.likesPerPages
+
     arrayOfHearts.forEach((heart) => {
       let addedToFavorite = false;
-      heart.addEventListener("click", function fillHeart(event) {
+
+      const fillHeart = (event) => {
         let selectedHeart = event.target;
         let selectedFooterLike = selectedHeart.parentNode;
         let selectedHeartCount = selectedFooterLike.querySelector(".heart-txt");
@@ -93,6 +95,13 @@ class globalLikesCounters {
             ".total-likes"
           ).innerHTML = `${likesPerPage} <i class="fas fa-heart"></i>`;
         }
+      };
+
+      heart.addEventListener("click", (e) => {
+        fillHeart(e);
+      });
+      heart.addEventListener("keyup", (e) => {
+        if (e.key === "Enter") fillHeart(e);
       });
     });
   }

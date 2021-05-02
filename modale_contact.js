@@ -5,8 +5,9 @@ let contactContainer = document.getElementById("container-modale");
 // Ouverture au clic
 const openModale = (photographers, photographerID) => {
   let contact = document.querySelector("#contact");
-  contact.addEventListener("click", (e) => {
+  const openModale = () => {
     document.getElementById("container-modale").style.display = "flex";
+    document.querySelector("#first").focus();
 
     //Ajoute le nom du photographe dans la modale
     photographers.forEach((photographer) => {
@@ -19,6 +20,15 @@ const openModale = (photographers, photographerID) => {
 
     // Ajout de l'id dans l'input hidden afin d'effectuer une redirection correcte
     document.querySelector("#inputIdPhotographer").value = photographerID;
+  };
+  contact.addEventListener("click", (e) => {
+    openModale();
+  });
+
+  contact.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+      openModale();
+    }
   });
 };
 
