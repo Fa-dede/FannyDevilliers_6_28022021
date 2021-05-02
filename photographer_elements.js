@@ -51,7 +51,7 @@ const addPhotographerLabel = (photographers, photographerID) => {
       document.querySelector(".tagline").innerHTML = photographer.tagline;
       document.querySelector(
         "#container-portrait"
-      ).innerHTML = `<img id='portrait' class="container-profile__picture" src="./img/Portraits/${photographer.portrait}" aria-label = "photo de profil du photographe"/> `;
+      ).innerHTML = `<img id='portrait' class="container-profile__picture" src="./img/Portraits/${photographer.portrait}" alt = '${photographer.name}' aria-label = "photo de profil du photographe"/>`;
 
       //BOUCLE 1.2 : incrémente une <li> en HTML à chaque tag de bouclé
       photographer.tags.forEach((tag) => {

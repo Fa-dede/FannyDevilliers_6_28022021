@@ -1,157 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" type="image/gif" href="./img/favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-    />
-    <script src="./main.js" type="module" defer></script>
-    <script src='./modale_contact.js' type='module' defer></script>
 
-    <title class="photographer-name-title">
-      <!-- Incrementation en JS  -->
-    </title>
-  </head>
-  <body>
-    <!-- Modale de contact -->
-    <div id="container-modale">
-      <div id="modale">
-        <img id="cross-close" src="./img/cross-close.svg" alt="cross-close" />
-        <h1 class="title-contact">Contactez</h1>
-        <h2 class="title-contact photographer-name"></h2>
-        <form
-          id="modal-form"
-          name="contact"
-          action="photographer-page.html"
-          method="GET"
-        >
-          <div id="input-first" class="form-data">
-            <label for="first">Prénom</label>
-            <input
-              class="text-control"
-              type="text"
-              id="first"
-              name="first"
-              minlength="2"
-              required
-              aria-required=true
-            />
-            <span class="error" id="error-first-name"></span>
-          </div>
-          <div class="form-data">
-            <label for="last">Nom</label>
-            <input
-              class="text-control"
-              type="text"
-              id="last"
-              name="last"
-              minlength="2"
-              required
-              aria-required=true
-            />
-            <span class="error" id="error-last-name"></span>
-          </div>
-          <div class="form-data">
-            <label for="email">Email</label>
-            <input
-              class="text-control"
-              type="email"
-              id="email"
-              name="email"
-              minlength="2"
-              required
-              aria-required=true
-            />
-            <span class="error" id="error-email"></span>
-          </div>
-          <div class="form-data">
-            <label for="message">Votre message</label>
-            <textarea
-              class="text-control"
-              type="text"
-              id="message"
-              name="message"
-              minlength="2"
-              required
-              aria-required=true
-            ></textarea>
-            <span class="error" id="error-message"></span>
-          </div>
-          <input type="hidden" name="id" id="inputIdPhotographer">
-          <input
-            id="submit"
-            class="btn-submit button"
-            type="submit"
-            value="Envoyer"
-          />
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" type="image/gif" href="./img/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+  <script src="./main.js" type="module" defer></script>
+  <script src='./modale_contact.js' type='module' defer></script>
+
+  <title class="photographer-name-title">
+    <!-- Incrementation en JS  -->
+  </title>
+</head>
+
+<body>
+  <!-- Modale de contact -->
+  <div id="container-modale">
+    <div id="modale">
+      <img id="cross-close" src="./img/cross-close.svg" alt="cross-close" />
+      <h1 class="title-contact">Contactez</h1>
+      <h2 class="title-contact photographer-name"></h2>
+      <form id="modal-form" name="contact" action="photographer-page.html" method="GET">
+        <div id="input-first" class="form-data">
+          <label for="first">Prénom</label>
+          <input class="text-control" type="text" id="first" name="first" minlength="2" required aria-required=true />
+          <span class="error" id="error-first-name"></span>
+        </div>
+        <div class="form-data">
+          <label for="last">Nom</label>
+          <input class="text-control" type="text" id="last" name="last" minlength="2" required aria-required=true />
+          <span class="error" id="error-last-name"></span>
+        </div>
+        <div class="form-data">
+          <label for="email">Email</label>
+          <input class="text-control" type="email" id="email" name="email" minlength="2" required aria-required=true />
+          <span class="error" id="error-email"></span>
+        </div>
+        <div class="form-data">
+          <label for="message">Votre message</label>
+          <textarea class="text-control" type="text" id="message" name="message" minlength="2" required
+            aria-required=true></textarea>
+          <span class="error" id="error-message"></span>
+        </div>
+        <input type="hidden" name="id" id="inputIdPhotographer">
+        <input id="submit" class="btn-submit button" type="submit" value="Envoyer" />
+      </form>
     </div>
-    <header class="header-pages">
-      <a href="./index.html">
-        <img
-          class="logo-index"
-          class="logo-pages"
-          src="./img/logo.png"
-          alt="logo-fish-eye"
-        />
-      </a>
-    </header>
-    <main>
-      <aside class="profile-insert">
-        <div class="information-container">
-          <h2 id="photographer-name" class="container-profile__name"></h2>
-          <div id="containerInfo" class="container-profile__information">
-            <h3 class="location"></h3>
-            <h4 class="tagline"></h4>
-          </div>
-
-          <div class="container-profile__tags">
-            <ul id="tag-list"></ul>
-          </div>
+  </div>
+  <header class="header-pages">
+    <a href="./index.html">
+      <img class="logo-index" class="logo-pages" src="./img/logo.png" alt="logo-fish-eye" />
+    </a>
+  </header>
+  <main>
+    <aside class="profile-insert">
+      <div class="information-container">
+        <h2 id="photographer-name" class="container-profile__name"></h2>
+        <div id="containerInfo" class="container-profile__information">
+          <h3 class="location"></h3>
+          <h4 class="tagline"></h4>
         </div>
 
-        <span id="contact" class="container-profile__button">Contactez-moi</span>
-        <div id="container-portrait" class="container-profile__picture"></div>
-
-        <!-- <img id="portrait" class="container-profile__picture" /> -->
-      </aside>
-      <main class="portfolio">
-        <div class="sort-by">
-          <span id='sort-by-text'>Triez-par</span>
-          <button id="button-filter" class="popularity-button">
-            <ul>
-              <li id="selected-filter" class="category category-1st">
-                <span id = "text-filter">Date</span><em class="fas fa-chevron-down"></em>
-              </li>
-          </button>
-          <button
-            id="button-filter-opened"
-            class="popularity-button popularity-button__opened"
-          >
-            <ul id='ul-filters-list'>
-              <li id="popularity-button" class="category category-1st">Popularité</li>
-                <em id="chevron-up-filter" class="fas fa-chevron-up"></em>
-              <li id="date-button" class="category category-2nd">Date</li>
-              <li id="title-button" class="category category-3rd">Titre</li>
-            </ul>
-          </button>
+        <div class="container-profile__tags">
+          <ul id="tag-list"></ul>
         </div>
+      </div>
 
-        <div id="portfolio" class="portfolio--photo-container">
-          <!-- Incrémentation en JS  -->
-        </div>
-        <div class="static-insert"></div>
+      <span id="contact" class="container-profile__button" aria-label='contact me'>Contactez-moi</span>
+      <div id="container-portrait" class="container-profile__picture"></div>
 
-        <div id="lightbox">
-          <!-- Incrémentation en JS -->
-        </div>
-      </main>
+      <!-- <img id="portrait" class="container-profile__picture" /> -->
+    </aside>
+    <main class="portfolio">
+      <div class="sort-by">
+        <span id='sort-by-text'>Triez-par</span>
+        <button id="button-filter" class="popularity-button">
+          <ul>
+            <li id="selected-filter" class="category category-1st">
+              <span id="text-filter">Date</span><em class="fas fa-chevron-down"></em>
+            </li>
+        </button>
+        <button id="button-filter-opened" class="popularity-button popularity-button__opened">
+          <ul id='ul-filters-list'>
+            <li id="popularity-button" class="category category-1st">Popularité</li>
+            <em id="chevron-up-filter" class="fas fa-chevron-up"></em>
+            <li id="date-button" class="category category-2nd">Date</li>
+            <li id="title-button" class="category category-3rd">Titre</li>
+          </ul>
+        </button>
+      </div>
+
+      <div id="portfolio" class="portfolio--photo-container">
+        <!-- Incrémentation en JS  -->
+      </div>
+      <div class="static-insert"></div>
+
+      <div id="lightbox">
+        <!-- Incrémentation en JS -->
+      </div>
     </main>
-  </body>
+  </main>
+</body>
+
 </html>
