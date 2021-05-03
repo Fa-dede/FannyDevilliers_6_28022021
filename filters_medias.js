@@ -15,13 +15,7 @@ import {
  * @param {array} picturesArray
  */
 
-const selectFilter = (
-  medias,
-  filter,
-  photographers,
-  photographerID,
-  picturesArray
-) => {
+const selectFilter = (medias, filter, photographers, photographerID) => {
   medias = medias;
   let dateButtonSelected = true;
   let popularityButtonSelected = false;

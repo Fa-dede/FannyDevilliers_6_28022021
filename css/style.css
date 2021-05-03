@@ -50,6 +50,7 @@ body {
 .profile-insert .container-profile__tags .tags {
   font-size: 18px;
   border-radius: 12px;
+  cursor: pointer;
 }
 .profile-insert .container-profile__button {
   grid-column: 3;
@@ -332,6 +333,7 @@ body {
   cursor: pointer;
   position: fixed;
   left: 44%;
+  z-index: 9999;
 }
 
 #container-img-button-lightbox {
@@ -466,6 +468,11 @@ header a {
   margin-top: -20px;
 }
 
+figure .container-profile__picture:hover {
+  transform: scale(1.3);
+  transition: 1000ms;
+}
+
 .container-profile {
   width: 30%;
   text-align: center;
@@ -593,7 +600,7 @@ ul {
 
   .portfolio--photo-container {
     margin: unset;
-    justify-content: center;
+    margin-left: 20px;
   }
 
   .static-insert {
@@ -760,7 +767,7 @@ ul {
   #tag-list {
     margin: unset;
     display: block;
-    width: 300px;
+    width: 100%;
   }
 
   .profile-insert .container-profile__tags {
@@ -772,6 +779,7 @@ ul {
     border-radius: 11px;
     padding: 2px 4px;
     margin: unset;
+    margin-right: 5px;
   }
 
   .profile-insert .container-profile__button {
@@ -810,7 +818,8 @@ ul {
   }
 
   .portfolio--photo-container {
-    padding-bottom: unset;
+    justify-content: center;
+    margin-left: unset;
   }
 
   .photo-picture {

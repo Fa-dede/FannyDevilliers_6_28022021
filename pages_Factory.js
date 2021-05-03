@@ -7,6 +7,7 @@ import { modaleBehaviour } from "./modale_contact.js";
 import { globalLikesCounters } from "./likes_counter.js";
 import { sortByTags } from "./tags_filters.js";
 import { scrollButtonBehavior } from "./scroll-to-main-content.js";
+// import { filterPicturesByTag } from "./filter-tags-for-photographer-page.js";
 
 class PagesFactory {
   constructor(photographerID, path) {
@@ -37,11 +38,13 @@ class PagesFactory {
         this.photographerID = this.photographerID;
         this.medias = datas.media;
 
-        //FACTORY DE PAGE AVEC MEDIAS
-        new MediasFactory(this.medias, this.photographerID, this.photographers);
-
         //ETIQUETTE DU PHOTOGRAPHE
         addPhotographerLabel(photographers, this.photographerID);
+
+        let tagsArrayOfPhotographer = [...document.querySelectorAll(".tags")];
+
+        //FACTORY DE PAGE AVEC MEDIAS
+        new MediasFactory(this.medias, this.photographerID, this.photographers);
 
         //MODALE
         modaleBehaviour(this.photographers, this.photographerID);

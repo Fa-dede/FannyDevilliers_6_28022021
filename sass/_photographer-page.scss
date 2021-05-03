@@ -30,6 +30,7 @@ body {
   #portrait {
     @include box-shadow-for-profile;
   }
+
   .container-profile {
     &__picture {
       // display: none;
@@ -54,6 +55,7 @@ body {
     &__tags .tags {
       font-size: 18px;
       border-radius: 12px;
+      cursor: pointer;
     }
     &__button {
       grid-column: 3;

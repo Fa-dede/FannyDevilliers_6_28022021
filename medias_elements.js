@@ -1,4 +1,5 @@
 import { lightbox } from "./lightbox.js";
+import { filterPicturesByTag } from "./filter-tags-for-photographer-page.js";
 /**
  *
  * @param {array} medias
@@ -23,6 +24,7 @@ const addMedias = (filter, photographers, photographerID) => {
                     <span class="photo-footer__likes"
                         ><span class="heart-txt">${media.likes}</span> <i tabIndex='0' class="hearts far fa-heart"></i
                     ></span>
+                    <span class ='tag-of-the-picture' style="display:none">#${media.tags}</span>
                     </footer>
                 </figure>`;
       }
@@ -35,6 +37,7 @@ const addMedias = (filter, photographers, photographerID) => {
                       <span  class="photo-footer__likes"
                           ><span class="heart-txt">${media.likes}</span> <i tabIndex='0'class="hearts far fa-heart"></i
                       ></span>
+                      <span class ='tag-of-the-picture' style="display:none">#${media.tags}</span>
                       </footer>
                       </figure>`;
       }
@@ -45,6 +48,8 @@ const addMedias = (filter, photographers, photographerID) => {
 
   let picArray = document.querySelectorAll(".photo-picture");
   new lightbox(picArray, filter, photographerID);
+
+  filterPicturesByTag(filter);
 };
 
 export { addMedias };

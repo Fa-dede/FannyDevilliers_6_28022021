@@ -57,7 +57,7 @@ const addPhotographerLabel = (photographers, photographerID) => {
       photographer.tags.forEach((tag) => {
         document.getElementById(
           "tag-list"
-        ).innerHTML += `<li class="tags">#${tag}</li> `;
+        ).innerHTML += `<li tabIndex = "0" class="tags">#${tag}</li> `;
       });
 
       //AJOUTE LE NOM DU PHOTOGRAPHE DANS LE HEAD TITLE DE LA PAGE

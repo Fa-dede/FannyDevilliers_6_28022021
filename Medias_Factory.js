@@ -2,7 +2,13 @@ import { addMedias } from "./medias_elements.js";
 import { selectFilter } from "./filters_medias.js";
 
 class MediasFactory {
-  constructor(medias, photographerID, photographers, type) {
+  constructor(
+    medias,
+    photographerID,
+    photographers,
+    type,
+    tagsArrayOfPhotographer
+  ) {
     this.photographers = photographers;
     this.type = type;
     this.medias = medias;
@@ -13,7 +19,7 @@ class MediasFactory {
     //AJOUTE LES MEDIAS
     addMedias(filter, photographers, photographerID); // appel de la lightbox à l'intérieur
 
-    //AJOUTE LES FILTRES
+    //AJOUTE LES FILTRES BUTTON
     selectFilter(medias, filter, photographers, photographerID);
   }
 }

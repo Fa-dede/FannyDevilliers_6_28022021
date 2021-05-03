@@ -16,7 +16,7 @@ export default {
       id: 930,
       city: "Paris",
       country: "France",
-      tags: ["sports", "architecture"],
+      tags: ["sport", "architecture"],
       tagline: "Capturer des compositions complexes",
       price: 250,
       portrait: "EllieRoseWilkens.jpg",
