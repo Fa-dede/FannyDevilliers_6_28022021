@@ -1,5 +1,5 @@
 import { lightbox } from "./lightbox.js";
-import { filterPicturesByTag } from "./filter-tags-for-photographer-page.js";
+import { globalLikesCounters } from "./likes_counter.js";
 /**
  *
  * @param {array} medias
@@ -44,12 +44,15 @@ const addMedias = (filter, photographers, photographerID) => {
     }
   });
 
+  //INCREMENTE LES LIKES POUR CHAQUE TYPE DE FILTRES / TAGS
+  new globalLikesCounters(filter, photographers, photographerID);
+
   //AJOUTE LA LIGHTBOX
 
   let picArray = document.querySelectorAll(".photo-picture");
   new lightbox(picArray, filter, photographerID);
 
-  filterPicturesByTag(filter);
+  // filterPicturesByTag(filter, photographers, photographerID);
 };
 
 export { addMedias };

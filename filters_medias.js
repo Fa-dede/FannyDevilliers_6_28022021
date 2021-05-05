@@ -1,4 +1,3 @@
-import { globalLikesCounters } from "./likes_counter.js";
 import { addMedias } from "./medias_elements.js";
 import {
   displayOpenedMenu,
@@ -25,6 +24,7 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
   let mediasArrayFilteredByTitle = [];
   let buttonFilterClosed = document.querySelector("#button-filter");
   let buttonFilterOpened = document.querySelector("#button-filter-opened");
+  let tagsArrayOfEachPhotographer = [...document.querySelectorAll(".tags")];
 
   displayOpenedMenu(buttonFilterClosed, buttonFilterOpened);
 
@@ -32,11 +32,21 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
   let buttonPopularity = document.querySelector("#popularity-button");
   let buttonTitle = document.querySelector("#title-button");
 
+  const getActiveClassToTagAll = () => {
+    tagsArrayOfEachPhotographer.forEach((button) => {
+      button.classList.remove("active");
+      if (button.innerHTML === "#all") {
+        button.classList.add("active");
+      }
+    });
+  };
+
   /**FILTRER PAR DATE SOURIS / CLAVIER
    *
    * @param {e} e = button de la date
    */
   const filterByDate = (e) => {
+    getActiveClassToTagAll();
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
     changeOrderTextInOpenedButtonFilter(e);
 
@@ -51,7 +61,6 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
     dateButtonSelected = true;
     titleButtonSelected = false;
     popularityButtonSelected = false;
-    new globalLikesCounters(filter, photographers, photographerID);
   };
 
   // EVENEMENT SOURIS
@@ -69,6 +78,7 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
    * @param {e} e = button Popularité
    */
   const filterByPopularity = (e) => {
+    getActiveClassToTagAll();
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
     changeOrderTextInOpenedButtonFilter(e);
 
@@ -85,7 +95,6 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
       popularityButtonSelected = true;
       titleButtonSelected = false;
       dateButtonSelected = false;
-      new globalLikesCounters(filter, photographers, photographerID);
     }
   };
 
@@ -105,6 +114,7 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
    */
 
   const filterByTitle = (e) => {
+    getActiveClassToTagAll();
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
     changeOrderTextInOpenedButtonFilter(e);
     if (!titleButtonSelected) {
@@ -119,7 +129,6 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
       titleButtonSelected = true;
       dateButtonSelected = false;
       popularityButtonSelected = false;
-      new globalLikesCounters(filter, photographers, photographerID);
     }
   };
 

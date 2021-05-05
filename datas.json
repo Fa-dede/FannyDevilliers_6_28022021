@@ -321,7 +321,7 @@
       "photographerId": 527,
       "image": "Portrait_Shaw.jpg",
       "title": "Shaw",
-      "tags": ["portait"],
+      "tags": ["portrait"],
       "likes": 52,
       "date": "2017-04-21",
       "price": 45
@@ -331,7 +331,7 @@
       "photographerId": 527,
       "image": "Portrait_Alexandra.jpg",
       "title": "Alexandra",
-      "tags": ["portait"],
+      "tags": ["portrait"],
       "likes": 95,
       "date": "2018-11-02",
       "price": 45
@@ -341,7 +341,7 @@
       "photographerId": 527,
       "image": "Portrait_AfternoonBreak.jpg",
       "title": "Afternoon Break",
-      "tags": ["portait"],
+      "tags": ["portrait"],
       "likes": 25,
       "date": "2019-01-02",
       "price": 45
