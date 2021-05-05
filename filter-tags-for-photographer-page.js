@@ -1,9 +1,11 @@
 import { addMedias } from "./medias_elements.js";
 import { globalLikesCounters } from "./likes_counter.js";
+import { selectFilter } from "./filters_medias.js";
 
 const filterPicturesByTag = (filter, photographers, photographerID) => {
   let tagsArrayOfEachPhotographer = [...document.querySelectorAll(".tags")];
   let mediasArray = filter;
+  selectFilter(filter, photographers, photographerID);
 
   /**
    * AJOUTE CLASSE "ACTIVE" AU TAG #ALL DES QUE LA PAGE S'OUVRE
@@ -37,7 +39,7 @@ const filterPicturesByTag = (filter, photographers, photographerID) => {
     mediaArrayfilterByTag.splice(0, mediaArrayfilterByTag.length); // vide le tableau à chaque clic
     let tagName = e.target.innerHTML.replace("#", "");
     pushMediaByTag(tagName, button);
-    new globalLikesCounters(filter, photographers, photographerID); //Comptabilise le nombre total de likes selon les tags/filtres
+    // new globalLikesCounters(filter, photographers, photographerID);
   };
 
   /**
