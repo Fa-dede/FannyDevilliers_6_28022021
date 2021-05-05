@@ -394,7 +394,8 @@
       "tags": ["travel"],
       "likes": 85,
       "date": "2019-04-03",
-      "price": 45
+      "price": 45, 
+      "alt": "Village méridional juché sur une falaise en front de mer"
     },
     {
       "id": 2525345343,
@@ -404,7 +405,8 @@
       "tags": ["portrait"],
       "likes": 34,
       "date": "2019-04-07",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait Noir et Blanc d'une fillette qui grimace"
     },
     {
       "id": 2523434634,
@@ -414,7 +416,8 @@
       "tags": ["portrait"],
       "likes": 63,
       "date": "2019-04-07",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait d'une femme de couleur au cheveux court portant de grosses lunettes rondes"
     },
     {
       "id": 398847109,
@@ -424,7 +427,8 @@
       "tags": ["portrait"],
       "likes": 55,
       "date": "2019-06-20",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait Noir et Blanc d'une jeune femme"
     },
     {
       "id": 2534342,
@@ -434,7 +438,8 @@
       "tags": ["events"],
       "likes": 25,
       "date": "2019-06-21",
-      "price": 45
+      "price": 45, 
+      "alt": "Jolie table de mariage dressée au bord de la plage"
     },
     {
       "id": 65235234,
@@ -444,7 +449,8 @@
       "tags": ["events"],
       "likes": 52,
       "date": "2019-06-25",
-      "price": 45
+      "price": 45, 
+      "alt": "Deux mariés au milieu de monolithes"
     },
     {
       "id": 23523434,
@@ -454,7 +460,8 @@
       "tags": ["events"],
       "likes": 77,
       "date": "2019-06-28",
-      "price": 45
+      "price": 45, 
+      "alt": "Mariés qui s'étreignent au milieu d'illumunations"
     },
     {
       "id": 5234343,
@@ -465,7 +472,8 @@
       "tags": ["animals"],
       "likes": 142,
       "date": "2019-08-23",
-      "price": 60
+      "price": 60, 
+      "alt": "Vidéo de chevaux sauvages qui galopent dans une vallée"
     },
     {
       "id": 95234343,
@@ -475,7 +483,8 @@
       "tags": ["animals"],
       "likes": 59,
       "date": "2019-07-02",
-      "price": 60
+      "price": 60, 
+      "alt": "Oiseau multicolore posé sur une branche"
     },
 
     {
@@ -486,7 +495,8 @@
       "tags": ["travel"],
       "likes": 25,
       "date": "2019-04-03",
-      "price": 60
+      "price": 60, 
+      "alt": "Deux geishas dans une rue en Chine face à une tour"
     },
     {
       "id": 2523434,
@@ -496,7 +506,8 @@
       "tags": ["travel"],
       "likes": 53,
       "date": "2019-05-06",
-      "price": 60
+      "price": 60, 
+      "alt": "Canal de Venise rempli de gondole"
     },
     {
       "id": 95293534,
@@ -506,7 +517,8 @@
       "tags": ["travel"],
       "likes": 33,
       "date": "2019-05-12",
-      "price": 60
+      "price": 60, 
+      "alt": "Lac surplombé d'une forêt verdoyante et de hautes montagnes"
     },
     {
       "id": 356234343,
@@ -516,7 +528,8 @@
       "tags": ["travel"],
       "likes": 53,
       "date": "2019-06-20",
-      "price": 60
+      "price": 60, 
+      "alt": "Vélo de ville garé en bas d'un lampadaire"
     },
     {
       "id": 235234343,
@@ -526,7 +539,8 @@
       "tags": ["travel"],
       "likes": 63,
       "date": "2019-06-26",
-      "price": 60
+      "price": 60, 
+      "alt": "Porte orientale ocre donnant sur un paysage"
     },
     {
       "id": 6234234343,
@@ -536,7 +550,8 @@
       "tags": ["architecture"],
       "likes": 52,
       "date": "2019-06-30",
-      "price": 60
+      "price": 60, 
+      "alt": "Dômes de Minarets"
     },
     {
       "id": 6525666253,
@@ -546,7 +561,8 @@
       "tags": ["architecture"],
       "likes": 63,
       "date": "2019-07-20",
-      "price": 60
+      "price": 60, 
+      "alt": "Village construit sur une montagne"
     },
     {
       "id": 98252523433,
@@ -556,7 +572,8 @@
       "tags": ["architecture"],
       "likes": 88,
       "date": "2020-01-05",
-      "price": 60
+      "price": 60, 
+      "alt": "Photographie en contre-plongée de la tour de Pise"
     },
     {
       "id": 9259398453,
@@ -567,7 +584,8 @@
       "tags": ["architecture"],
       "likes": 57,
       "date": "2020-01-20",
-      "price": 65
+      "price": 65, 
+      "alt": "Vidéo d'une autoroute quasi-vide dont les voies s'entremêlent"
     },
     {
       "id": 3523523534,
@@ -577,7 +595,8 @@
       "tags": ["architecture"],
       "likes": 54,
       "date": "2020-05-05",
-      "price": 60
+      "price": 60, 
+      "alt": "Angle de toit de bâtiment de type Haussmanien"
     },
 
     {
@@ -589,7 +608,8 @@
       "tags": ["sport"],
       "likes": 150,
       "date": "2018-02-30",
-      "price": 70
+      "price": 70, 
+      "alt": "Vidéo d'une femme faisant de la gymnastique acrobatique aérienne"
     },
     {
       "id": 235234343,
@@ -599,7 +619,8 @@
       "tags": ["sport"],
       "likes": 101,
       "date": "2018-03-05",
-      "price": 65
+      "price": 65, 
+      "alt": "Femme althétique escaladant une falaise"
     },
     {
       "id": 235343222,
@@ -609,7 +630,8 @@
       "tags": ["sport"],
       "likes": 103,
       "date": "2018-03-10",
-      "price": 70
+      "price": 70, 
+      "alt": "Jeune homme qui prend un tunnel en surf"
     },
     {
       "id": 7775342343,
@@ -619,7 +641,8 @@
       "tags": ["sport"],
       "likes": 77,
       "date": "2018-04-16",
-      "price": 50
+      "price": 50, 
+      "alt": "Skieur en plein vol"
     },
     {
       "id": 9253445784,
@@ -629,7 +652,8 @@
       "tags": ["sport"],
       "likes": 88,
       "date": "2018-04-22",
-      "price": 65
+      "price": 65, 
+      "alt": "Athlètes féminines courant sur une piste en Tartan"
     },
     {
       "id": 22299394,
@@ -639,7 +663,8 @@
       "tags": ["sport"],
       "likes": 95,
       "date": "2018-04-27",
-      "price": 70
+      "price": 70, 
+      "alt": "Jeunes gens s'entraînant dans un skate park"
     },
     {
       "id": 3452342633,
@@ -649,7 +674,8 @@
       "tags": ["architecture"],
       "likes": 52,
       "date": "2018-05-03",
-      "price": 75
+      "price": 75, 
+      "alt": "Dôme de lumière vu de l'intérieur"
     },
     {
       "id": 939234243,
@@ -659,7 +685,8 @@
       "tags": ["architecture"],
       "likes": 55,
       "date": "2018-05-10",
-      "price": 72
+      "price": 72, 
+      "alt": "Batiment futuriste aux courbes fluides"
     },
     {
       "id": 222959233,
@@ -669,7 +696,8 @@
       "tags": ["architecture"],
       "likes": 85,
       "date": "2018-05-15",
-      "price": 71
+      "price": 71, 
+      "alt": "Façade d'un bâtiment vu du dessous"
     },
     {
       "id": 965933434,
@@ -679,7 +707,8 @@
       "tags": ["architecture"],
       "likes": 66,
       "date": "2018-05-20",
-      "price": 58
+      "price": 58, 
+      "alt": "Façade d'un bâtiment rectangulaire vu du dessous"
     },
     {
       "id": 777723343,
@@ -689,7 +718,8 @@
       "tags": ["architecture"],
       "likes": 79,
       "date": "2018-05-21",
-      "price": 80
+      "price": 80, 
+      "alt": "Façade d'un bâtiment futuriste convexe"
     }
   ]
 }
