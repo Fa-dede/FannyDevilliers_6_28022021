@@ -1,5 +1,6 @@
 import { lightbox } from "./lightbox.js";
 import { globalLikesCounters } from "./likes_counter.js";
+import { selectFilter } from "./filters_medias.js";
 /**
  *
  * @param {array} medias
@@ -16,7 +17,7 @@ const addMedias = (filter, photographers, photographerID) => {
                         tabIndex='0'
                         class="photo-picture"
                         src="./img/${media.photographerId}/${media.image}"
-                        alt=""
+                        alt="${media.alt}"
                         />
     
                     <footer class="photo-footer">
@@ -51,8 +52,6 @@ const addMedias = (filter, photographers, photographerID) => {
 
   let picArray = document.querySelectorAll(".photo-picture");
   new lightbox(picArray, filter, photographerID);
-
-  // filterPicturesByTag(filter, photographers, photographerID);
 };
 
 export { addMedias };

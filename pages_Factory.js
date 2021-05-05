@@ -48,6 +48,9 @@ class PagesFactory {
           this.photographerID
         );
 
+        //filtre
+        // selectFilter(medias, filter, photographers, photographerID);
+
         //FACTORY DE PAGE AVEC MEDIAS
         new MediasFactory(this.medias, this.photographerID, this.photographers);
 

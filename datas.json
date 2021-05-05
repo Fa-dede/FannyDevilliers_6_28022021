@@ -70,7 +70,8 @@
       "tags": ["fashion"],
       "likes": 62,
       "date": "2011-12-08",
-      "price": 55
+      "price": 55, 
+      "alt": "Femme habillée en jogging jaune, qui pose devant un terrain de basketball"
     },
     {
       "id": 8520927,
@@ -80,7 +81,8 @@
       "tags": ["fashion"],
       "likes": 11,
       "date": "2011-11-06",
-      "price": 55
+      "price": 55, 
+      "alt": "Femme blonde posant au milieu d'un pont"
     },
     {
       "id": 9025895,
@@ -90,7 +92,8 @@
       "tags": ["fashion"],
       "likes": 72,
       "date": "2013-08-12",
-      "price": 55
+      "price": 55, 
+      "alt": "Femme brune portant une robe bariolée et un sac rouge "
     },
     {
       "id": 9275938,
@@ -100,7 +103,8 @@
       "tags": ["events"],
       "likes": 69,
       "date": "2018-02-22",
-      "price": 55
+      "price": 55, 
+      "alt": "Kiosque de cérémonie de mariage"
     },
     {
       "id": 2053494,
@@ -110,7 +114,8 @@
       "tags": ["events"],
       "likes": 2,
       "date": "2020-05-25",
-      "price": 55
+      "price": 55, 
+      "alt": "Deux mariés de dos entourés de feux d'artifices"
     },
     {
       "id": 7324238,
@@ -120,7 +125,8 @@
       "tags": ["events"],
       "likes": 33,
       "date": "2019-06-12",
-      "price": 55
+      "price": 55, 
+      "alt": "Salle de fête préparée pour un anniversaire"
     },
     {
       "id": 8328953,
@@ -130,7 +136,8 @@
       "tags": ["art"],
       "likes": 24,
       "date": "2011-12-08",
-      "price": 100
+      "price": 100, 
+      "alt": "Vidéo d'une sculpture représentant un cheval "
     },
     {
       "id": 7502053,
@@ -140,7 +147,8 @@
       "tags": ["art"],
       "likes": 88,
       "date": "2007-05-07",
-      "price": 55
+      "price": 55, 
+      "alt": "Peinture représentant un triangle blanc devant un homme"
     },
     {
       "id": 8523492,
@@ -150,7 +158,8 @@
       "tags": ["art"],
       "likes": 24,
       "date": "2018-05-05",
-      "price": 55
+      "price": 55, 
+      "alt": "Passage souterrain taggé éclairé par des néons violets "
     },
     {
       "id": 75902334,
@@ -160,7 +169,8 @@
       "tags": ["art"],
       "likes": 75,
       "date": "2019-11-25",
-      "price": 55
+      "price": 55, 
+      "alt": "Peinture remplie d'oiseaux bleus et orange"
     },
 
     {
@@ -171,7 +181,8 @@
       "tags": ["sport"],
       "likes": 52,
       "date": "2013-02-30",
-      "price": 70
+      "price": 70, 
+      "alt": "Cinq rameurs d'aviron sur fond noir "
     },
     {
       "id": 92758372,
@@ -181,7 +192,8 @@
       "tags": ["fashion"],
       "likes": 58,
       "date": "2018-07-17",
-      "price": 70
+      "price": 70, 
+      "alt": "Un homme blond habillé en blanc et une femme de couleur vétue d'une robe bleue, dansent"
     },
     {
       "id": 32958383,
@@ -191,7 +203,8 @@
       "tags": ["fashion"],
       "likes": 11,
       "date": "2019-08-12",
-      "price": 70
+      "price": 70, 
+      "alt": "Femme de couleur portant une robe rouge et des baskets blanches, descendant des escaliers de rue"
     },
     {
       "id": 928587383,
@@ -201,7 +214,8 @@
       "tags": ["events"],
       "likes": 2,
       "date": "2019-01-02",
-      "price": 70
+      "price": 70, 
+      "alt": "5 personnes en réunion de travail"
     },
     {
       "id": 725639493,
@@ -211,7 +225,8 @@
       "tags": ["events"],
       "likes": 3,
       "date": "2019-05-20",
-      "price": 70
+      "price": 70, 
+      "alt": "Présentation d'un professeur devant ses élèves"
     },
     {
       "id": 23394384,
@@ -221,7 +236,8 @@
       "tags": ["events"],
       "likes": 52,
       "date": "2019-07-18",
-      "price": 70
+      "price": 70, 
+      "alt": "Femme jouant du synthétiseur sur une scène de concert"
     },
     {
       "id": 87367293,
@@ -231,7 +247,8 @@
       "tags": ["events"],
       "likes": 23,
       "date": "2018-02-22",
-      "price": 70
+      "price": 70, 
+      "alt": "Femme vêtue d'un gilet à franges tenant un micro sur une scène"
     },
     {
       "id": 593834784,
@@ -241,7 +258,8 @@
       "tags": ["animals"],
       "likes": 52,
       "date": "2017-03-13",
-      "price": 70
+      "price": 70, 
+      "alt": "Cerf se tenant immobile dans une prairie"
     },
     {
       "id": 83958935,
@@ -252,7 +270,8 @@
       "tags": ["animals"],
       "likes": 52,
       "date": "2016-06-12",
-      "price": 70
+      "price": 70, 
+      "alt": "Vidéo d'un chiot jouant avec sa laisse dans le sable devant l'océan"
     },
 
     {
@@ -264,7 +283,8 @@
       "tags": ["travel"],
       "likes": 23,
       "date": "2017-03-18",
-      "price": 45
+      "price": 45, 
+      "alt": "Vidéo d'un vol au dessus de crêtes de montagnes ocres"
     },
     {
       "id": 343423425,
@@ -274,7 +294,8 @@
       "tags": ["travel"],
       "likes": 101,
       "date": "2017-04-03",
-      "price": 45
+      "price": 45, 
+      "alt": "Bains chauds naturels remplis d'une trentaine de personne "
     },
     {
       "id": 73434243,
@@ -284,7 +305,8 @@
       "tags": ["travel"],
       "likes": 99,
       "date": "2018-04-30",
-      "price": 45
+      "price": 45, 
+      "alt": "Paysage automnale valloné divisé par une route sinueuse"
     },
     {
       "id": 23425523,
@@ -294,7 +316,8 @@
       "tags": ["travel"],
       "likes": 34,
       "date": "2016-04-05",
-      "price": 45
+      "price": 45, 
+      "alt": "Pont traversant une forêt tropicale"
     },
     {
       "id": 23134513,
@@ -304,7 +327,8 @@
       "tags": ["travel"],
       "likes": 23,
       "date": "2017-03-18",
-      "price": 45
+      "price": 45, 
+      "alt": "Photographie d'un Kiosque de cérémonie de mariage"
     },
     {
       "id": 92352352,
@@ -314,7 +338,8 @@
       "tags": ["portrait"],
       "likes": 66,
       "date": "2018-05-24",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait d'une jeune femme rousse portant un rouge à lèvre rouge"
     },
     {
       "id": 34513453,
@@ -324,7 +349,8 @@
       "tags": ["portrait"],
       "likes": 52,
       "date": "2017-04-21",
-      "price": 45
+      "price": 45, 
+      "alt": "Photographie Noir & Blanc d'un homme portant une chaîne en argent"
     },
     {
       "id": 23523533,
@@ -334,7 +360,8 @@
       "tags": ["portrait"],
       "likes": 95,
       "date": "2018-11-02",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait Noir & Blanc d'une femme de couleur avec des cheveux et sourcils blancs"
     },
     {
       "id": 525834234,
@@ -344,7 +371,8 @@
       "tags": ["portrait"],
       "likes": 25,
       "date": "2019-01-02",
-      "price": 45
+      "price": 45, 
+      "alt": "Portrait Noir & Blanc d'un vieil homme fumant une cigarette"
     },
 
     {
@@ -355,7 +383,8 @@
       "tags": ["travel"],
       "likes": 88,
       "date": "2019-02-03",
-      "price": 45
+      "price": 45, 
+      "alt": "Vallée verdoyante illuminé par des rayons de soleil avec une personne seule sur une crête"
     },
     {
       "id": 625025343,

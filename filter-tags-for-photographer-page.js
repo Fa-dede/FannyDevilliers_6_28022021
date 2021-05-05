@@ -5,7 +5,6 @@ import { selectFilter } from "./filters_medias.js";
 const filterPicturesByTag = (filter, photographers, photographerID) => {
   let tagsArrayOfEachPhotographer = [...document.querySelectorAll(".tags")];
   let mediasArray = filter;
-  selectFilter(filter, photographers, photographerID);
 
   /**
    * AJOUTE CLASSE "ACTIVE" AU TAG #ALL DES QUE LA PAGE S'OUVRE

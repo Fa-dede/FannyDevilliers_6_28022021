@@ -17,7 +17,7 @@ class MediasFactory {
     this.photographerID = photographerID;
 
     //AJOUTE LES MEDIAS
-    addMedias(filter, photographers, photographerID); // appel de la lightbox à l'intérieur
+    addMedias(filter, photographers, photographerID, medias); // appel de la lightbox à l'intérieur
 
     //AJOUTE LES FILTRES BUTTON
     selectFilter(medias, filter, photographers, photographerID);

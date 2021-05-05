@@ -46,15 +46,17 @@ class globalLikesCounters {
         );
       }
 
-      photographers.forEach((photographer) => {
-        document.querySelector(".static-insert").innerHTML = `
+      if (Array.isArray(photographers)) {
+        photographers.forEach((photographer) => {
+          document.querySelector(".static-insert").innerHTML = `
           <span class="total-likes"></span>
           <span class ='price-per-day'>${photographer.price}€ / jour</span>
           `;
-        document.querySelector(
-          ".total-likes"
-        ).innerHTML = `${this.likesPerPage} <i class="fas fa-heart"></i>`;
-      });
+          document.querySelector(
+            ".total-likes"
+          ).innerHTML = `${this.likesPerPage} <i class="fas fa-heart"></i>`;
+        });
+      }
     });
   }
 
