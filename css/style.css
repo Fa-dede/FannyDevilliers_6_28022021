@@ -95,11 +95,13 @@ body {
   margin-left: 13px;
   list-style: none;
 }
-#selected-filter em {
+#selected-filter .fa-chevron-down {
   margin: unset;
-  display: block;
   float: right;
   margin-right: 10px;
+}
+#selected-filter .fa-chevron-up {
+  display: none;
 }
 
 .popularity-button {
@@ -549,10 +551,6 @@ figure .container-profile__picture:hover {
 .container-profile__tags ul {
   margin: unset;
   margin-top: 8px;
-}
-
-ul {
-  padding-inline-start: 0;
 }
 
 @media screen and (max-width: 940px) {

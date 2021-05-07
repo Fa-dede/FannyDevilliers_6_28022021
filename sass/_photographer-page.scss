@@ -101,11 +101,14 @@ body {
   text-align: start;
   margin-left: 13px;
   list-style: none;
-  em {
+  .fa-chevron-down {
     margin: unset;
-    display: block;
+    // display: block;
     float: right;
     margin-right: 10px;
+  }
+  .fa-chevron-up {
+    display: none;
   }
 }
 
