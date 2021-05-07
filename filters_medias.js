@@ -25,8 +25,14 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
   let buttonFilterClosed = document.querySelector("#button-filter");
   let buttonFilterOpened = document.querySelector("#button-filter-opened");
   let tagsArrayOfEachPhotographer = [...document.querySelectorAll(".tags")];
+  let buttonFilterIsOpened = false;
+  let filterList = document.querySelector("#ul-filters-list");
 
-  displayOpenedMenu(buttonFilterClosed, buttonFilterOpened);
+  displayOpenedMenu(
+    buttonFilterClosed,
+    buttonFilterOpened,
+    buttonFilterIsOpened
+  );
 
   let buttonDate = document.querySelector("#date-button");
   let buttonPopularity = document.querySelector("#popularity-button");
@@ -41,10 +47,8 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
     });
   };
 
-  /**FILTRER PAR DATE SOURIS / CLAVIER
-   *
-   * @param {e} e = button de la date
-   */
+  //FILTRER PAR DATE SOURIS / CLAVIER
+
   const filterByDate = (e) => {
     getActiveClassToTagAll();
     hideOpenedMenu(buttonFilterClosed, buttonFilterOpened);
@@ -65,7 +69,7 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
 
   // EVENEMENT SOURIS
   buttonDate.addEventListener("click", (e) => {
-    filterByDate(e);
+    filterByDate(e, buttonDate, buttonTitle, buttonPopularity);
   });
 
   //EVENEMENT CLAVIER
@@ -99,8 +103,8 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
   };
 
   // EVENEMENT SOURIS
-  buttonPopularity.addEventListener("click", (e) => {
-    filterByPopularity(e);
+  buttonPopularity.addEventListener("click", (e, buttonPopularity) => {
+    filterByPopularity(e, buttonDate, buttonTitle, buttonPopularity);
   });
 
   // EVENEMENT CLAVIER
@@ -133,7 +137,7 @@ const selectFilter = (medias, filter, photographers, photographerID) => {
   };
 
   buttonTitle.addEventListener("click", (e) => {
-    filterByTitle(e);
+    filterByTitle(e, buttonDate, buttonTitle, buttonPopularity);
   });
 
   buttonTitle.addEventListener("keyup", (e) => {
