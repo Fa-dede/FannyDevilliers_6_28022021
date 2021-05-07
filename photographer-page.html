@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="icon" type="image/gif" href="./img/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
-  <script src="./main.js" type="module" defer></script>
-  <script src='./modale_contact.js' type='module'></script>
+  <script src="./main.js" type="module"></script>
 
   <title class="photographer-name-title">
     <!-- Incrementation en JS  -->
@@ -68,7 +67,7 @@
         </div>
       </div>
 
-      <span tabIndex='0' id="contact" class="container-profile__button" aria-label='contact me'>Contactez-moi</span>
+      <button tabIndex='0' id="contact" class="container-profile__button">Contactez-moi</button>
       <div id="container-portrait" class="container-profile__picture"></div>
 
       <!-- <img id="portrait" class="container-profile__picture" /> -->
@@ -76,21 +75,20 @@
     <div class="portfolio">
       <div class="sort-by">
         <span id='sort-by-text'>Triez-par</span>
-        <span id="button-filter" class="popularity-button">
-          <ul>
-            <li id="selected-filter" class="category category-1st">
-              <span id="text-filter">Date</span><em class="fas fa-chevron-down"></em>
-            </li>
-        </span>
-        <span id="button-filter-opened" class="popularity-button popularity-button__opened">
-          <ul id='ul-filters-list'>
+        <button id="button-filter" class="popularity-button">
+          <li id="selected-filter" class="category category-1st">
+            <span id="text-filter">Date</span><em class="fas fa-chevron-down"></em>
+          </li>
+        </button>
+        <button id="button-filter-opened" class="popularity-button popularity-button__opened">
+          <span id='ul-filters-list'>
             <li tabIndex='0' id="date-button" class="category category-1st second-element">Date</li>
             <em id="chevron-up-filter" class="fas fa-chevron-up"></em>
             <li tabIndex='0' id="popularity-button" class="category category-2nd first-element">Popularité</li>
 
             <li tabIndex='0' id="title-button" class="category category-3rd third-element">Titre</li>
-          </ul>
-        </span>
+          </span>
+        </button>
       </div>
 
       <div id="portfolio" class="portfolio--photo-container">
