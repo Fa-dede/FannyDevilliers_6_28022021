@@ -454,7 +454,6 @@ header a {
 }
 .navigation-bar ul {
   display: inline;
-  padding-inline-start: 0;
   line-height: 30px;
 }
 .navigation-bar__tags {
