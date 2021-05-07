@@ -163,7 +163,7 @@ class lightbox {
 
   closeCarouselOnKeyUp() {
     document.addEventListener("keyup", (e) => {
-      if (e.key === "Escape") {
+      if (e.key === "Escape" || e.key === "Tab") {
         this.lightbox.innerHTML = "";
         this.lightbox.style.display = "none";
       }
