@@ -4,7 +4,6 @@ import {
   addPhotographerLabel,
 } from "./photographer_elements.js";
 import { modaleBehaviour } from "./modale_contact.js";
-import { globalLikesCounters } from "./likes_counter.js";
 import { sortByTags } from "./tags_filters.js";
 import { scrollButtonBehavior } from "./scroll-to-main-content.js";
 import { filterPicturesByTag } from "./filter-tags-for-photographer-page.js";
@@ -57,11 +56,6 @@ class PagesFactory {
   }
 
   createPage() {
-    // if (this.path.includes("index.html")) {
-    //   this.createHomePage();
-    // } else if (this.path.includes("photographer-page.html")) {
-    //   this.createPhotographerPage();
-    // }
     if (this.path.includes("photographer-page.html")) {
       this.createPhotographerPage();
     } else {
