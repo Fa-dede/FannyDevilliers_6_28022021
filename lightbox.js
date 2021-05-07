@@ -50,7 +50,7 @@ class lightbox {
         <video controls alt preload loop autoplay  id="video-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].video}" title = "${arrayOfPictures[i].alt}">vidéo non prise en charge par votre navigateur</video>
         `;
         let photoMarkup = `
-        <img id="image-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].image}" alt = "${arrayOfPictures[i].alt}">
+        <img id="image-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].image}" alt = "${arrayOfPictures[i].alt}" title = "${arrayOfPictures[i].alt}">
         `;
         let domCarousel = `
         <div id = 'container-img-button-lightbox'>
