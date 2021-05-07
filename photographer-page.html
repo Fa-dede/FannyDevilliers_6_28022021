@@ -9,7 +9,7 @@
   <link rel="icon" type="image/gif" href="./img/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
   <script src="./main.js" type="module" defer></script>
-  <script src='./modale_contact.js' type='module' defer></script>
+  <script src='./modale_contact.js' type='module'></script>
 
   <title class="photographer-name-title">
     <!-- Incrementation en JS  -->
@@ -22,7 +22,7 @@
     <div id="modale">
       <img id="cross-close" src="./img/cross-close.svg" alt="cross-close" />
       <h1 class="title-contact">Contactez</h1>
-      <h2 class="title-contact photographer-name"></h2>
+      <h2 class="title-contact photographer-name">Nom du photographe</h2>
       <form id="modal-form" name="contact" action="photographer-page.html" method="GET">
         <div id="input-first" class="form-data">
           <label for="first">Prénom</label>
@@ -41,8 +41,7 @@
         </div>
         <div class="form-data">
           <label for="message">Votre message</label>
-          <textarea class="text-control" type="text" id="message" name="message" minlength="2" required
-            aria-required=true></textarea>
+          <textarea class="text-control" id="message" name="message" minlength="2" required></textarea>
           <span class="error" id="error-message"></span>
         </div>
         <input type="hidden" name="id" id="inputIdPhotographer">
@@ -52,16 +51,16 @@
   </div>
   <header class="header-pages">
     <a href="./index.html">
-      <img class="logo-index" class="logo-pages" src="./img/logo.png" alt="logo-fish-eye" />
+      <img class="logo-index logo-pages" src="./img/logo.png" alt="logo-fish-eye" />
     </a>
   </header>
   <main>
     <aside class="profile-insert">
       <div class="information-container">
-        <h2 id="photographer-name" class="container-profile__name"></h2>
+        <h2 id="photographer-name" class="container-profile__name">Nom du Photographe</h2>
         <div id="containerInfo" class="container-profile__information">
-          <h3 class="location"></h3>
-          <h4 class="tagline"></h4>
+          <h3 class="location">Ville, Pays</h3>
+          <h4 class="tagline">Liste de Tags</h4>
         </div>
 
         <div class="container-profile__tags">
@@ -74,16 +73,16 @@
 
       <!-- <img id="portrait" class="container-profile__picture" /> -->
     </aside>
-    <main class="portfolio">
+    <div class="portfolio">
       <div class="sort-by">
         <span id='sort-by-text'>Triez-par</span>
-        <button id="button-filter" class="popularity-button">
+        <span id="button-filter" class="popularity-button">
           <ul>
             <li id="selected-filter" class="category category-1st">
               <span id="text-filter">Date</span><em class="fas fa-chevron-down"></em>
             </li>
-        </button>
-        <button id="button-filter-opened" class="popularity-button popularity-button__opened">
+        </span>
+        <span id="button-filter-opened" class="popularity-button popularity-button__opened">
           <ul id='ul-filters-list'>
             <li tabIndex='0' id="date-button" class="category category-1st second-element">Date</li>
             <em id="chevron-up-filter" class="fas fa-chevron-up"></em>
@@ -91,7 +90,7 @@
 
             <li tabIndex='0' id="title-button" class="category category-3rd third-element">Titre</li>
           </ul>
-        </button>
+        </span>
       </div>
 
       <div id="portfolio" class="portfolio--photo-container">
@@ -102,7 +101,7 @@
       <div id="lightbox">
         <!-- Incrémentation en JS -->
       </div>
-    </main>
+    </div>
   </main>
 </body>
 
