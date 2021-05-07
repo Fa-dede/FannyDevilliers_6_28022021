@@ -13,6 +13,12 @@ const displayOpenedMenu = (buttonFilterClosed, buttonFilterOpened) => {
     buttonFilterClosed.style.display = "none";
     buttonFilterOpened.style.display = "inline-block";
   });
+  buttonFilterClosed.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+      buttonFilterClosed.style.display = "none";
+      buttonFilterOpened.style.display = "inline-block";
+    }
+  });
 };
 
 const hideOpenedMenu = (buttonFilterClosed, buttonFilterOpened) => {

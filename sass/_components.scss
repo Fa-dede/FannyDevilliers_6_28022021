@@ -9,6 +9,12 @@
   margin-right: 5px;
 }
 
+.navigation-bar__tags:hover,
+.navigation-bar__tags:focus {
+  background-color: $primary-color;
+  color: #fff;
+}
+
 #scroll-to-main-button {
   display: none;
   font-weight: 700;

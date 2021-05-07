@@ -83,7 +83,7 @@ class lightbox {
       let lightboxIsAlreadyOpened = false;
 
       pictures[i].addEventListener("keyup", (e) => {
-        if (e.key === "Enter" && lightboxIsAlreadyOpened === false) {
+        if (e.key === "Enter" && lightboxIsAlreadyOpened == false) {
           openLightbox();
           lightboxIsAlreadyOpened = true;
         }

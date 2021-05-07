@@ -69,9 +69,20 @@ body {
   min-width: 160px;
   text-align: center;
 }
+.profile-insert .container-profile__button:hover, .profile-insert .container-profile__button:focus {
+  background-color: #DB8876;
+  color: #000;
+  transition: 600ms;
+}
 
 #tag-list {
   position: absolute;
+  margin-left: -40px;
+}
+#tag-list li:hover,
+#tag-list li:focus {
+  background-color: #901C1C;
+  color: #fff;
 }
 
 #container-portrait {
@@ -331,6 +342,12 @@ body {
   margin-right: 5px;
 }
 
+.navigation-bar__tags:hover,
+.navigation-bar__tags:focus {
+  background-color: #901C1C;
+  color: #fff;
+}
+
 #scroll-to-main-button {
   display: none;
   font-weight: 700;
@@ -380,11 +397,9 @@ body {
   text-align: center;
   border-radius: 5px;
   width: auto;
-  height: 100%;
 }
 
 #video-clicked {
-  max-height: 700px;
   display: block;
   border-radius: 5px;
   width: 100%;

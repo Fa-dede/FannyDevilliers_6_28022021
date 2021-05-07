@@ -74,11 +74,23 @@ body {
       min-width: 160px;
       text-align: center;
     }
+    &__button:hover,
+    &__button:focus {
+      background-color: $scroll-top-button-background;
+      color: #000;
+      transition: 600ms;
+    }
   }
 }
 
 #tag-list {
   position: absolute;
+  margin-left: -40px;
+  li:hover,
+  li:focus {
+    background-color: $primary-color;
+    color: #fff;
+  }
 }
 
 #container-portrait {
