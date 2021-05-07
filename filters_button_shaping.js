@@ -8,8 +8,6 @@
 //   }
 // };
 
-import { selectFilter } from "./filters_medias.js";
-
 const displayOpenedMenu = (buttonFilterClosed, buttonFilterOpened) => {
   buttonFilterClosed.addEventListener("click", (e) => {
     buttonFilterClosed.style.display = "none";
@@ -26,12 +24,7 @@ const changeTextOfFilterButton = (e, textOfTargetedLi) => {
   document.querySelector("#text-filter").innerHTML = textOfTargetedLi;
 };
 
-const changeOrderTextInOpenedButtonFilter = (
-  e,
-  buttonDate,
-  buttonTitle,
-  buttonPopularity
-) => {
+const changeOrderTextInOpenedButtonFilter = (e) => {
   let arrayOfLi = [...document.querySelectorAll("#ul-filters-list li")];
   for (let i = 0; i < arrayOfLi.length; i++) {
     if (arrayOfLi[i] === e.target) {

@@ -1,4 +1,10 @@
-const form_validation = (e) => {
+const form_validation = (
+  e,
+  textOfName,
+  textOfSurname,
+  textOfEmail,
+  textOfMessage
+) => {
   let regexNames = /^[a-zA-ZéèëîïÉÊËÈÎÏ][a-zéèêëàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêëàçîï]+)?/;
   let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -15,21 +21,6 @@ const form_validation = (e) => {
     email: document.getElementById("error-email"),
   };
 
-  /*
-    alerts.firstName
-    alerts['firstName']
-    isValid(inputs, "firstName", "Veuillez saisir votre nom");
-  
-   isValid(inputs, property, errorMessage) {
-      if (inputs[property].validity.valueMissing) {
-        e.preventDefault();
-        alerts[property].innerText = errorMessage;
-        alerts[property].email.style.color = "white";
-        inputs[property].email.focus();
-      }
-    }
-    */
-
   // Validation du Message
   if (inputs.message.validity.valueMissing) {
     e.preventDefault();
@@ -37,6 +28,8 @@ const form_validation = (e) => {
       "Veuillez écrire votre message ";
     document.getElementById("error-message").style.color = "#1E1E1E";
     inputs.message.focus();
+  } else {
+    textOfMessage = `Message : ${inputs.message.value}`;
   }
 
   // Validation de l'email
@@ -62,6 +55,7 @@ const form_validation = (e) => {
     alerts.email.innerText = "";
     document.querySelector("#email").style.color = "";
     document.querySelector("#email").style.fontWeight = "400";
+    textOfEmail = `Email : ${inputs.email.value}`;
   }
 
   // Validation du Nom de Famille
@@ -88,6 +82,7 @@ const form_validation = (e) => {
     alerts.lastName.innerText = "";
     document.querySelector("#last").style.color = "#000";
     document.querySelector("#last").style.fontWeight = "400";
+    textOfName = `Nom : ${inputs.lastName.value}`;
   }
   // Validation du prénom
 
@@ -112,7 +107,28 @@ const form_validation = (e) => {
     alerts.firstName.innerText = "";
     document.querySelector("#first").style.color = "#000";
     document.querySelector("#first").style.fontWeight = "400";
+    textOfSurname = `Prénom : ${inputs.firstName.value}`;
   }
+
+  console.log(textOfSurname);
+  console.log(textOfName);
+  console.log(textOfEmail);
+  console.log(textOfMessage);
 };
 
 export { form_validation };
+
+/*
+    alerts.firstName
+    alerts['firstName']
+    isValid(inputs, "firstName", "Veuillez saisir votre nom");
+  
+   isValid(inputs, property, errorMessage) {
+      if (inputs[property].validity.valueMissing) {
+        e.preventDefault();
+        alerts[property].innerText = errorMessage;
+        alerts[property].email.style.color = "white";
+        inputs[property].email.focus();
+      }
+    }
+    */

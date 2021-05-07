@@ -59,10 +59,16 @@ const closeModaleOnKeyUp = () => {
 
 // comportement à l'intérieur de la modale de contact
 const validate = (photographerID) => {
-  document.querySelector("#submit").addEventListener("click", form_validation);
-  document
-    .querySelector("#modal-form")
-    .addEventListener("submit", form_validation);
+  let textOfSurname = "Prénom : non renseigné";
+  let textOfName = "Nom : non renseigné";
+  let textOfEmail = "Email : non renseigné";
+  let textOfMessage = "Message : non renseigné";
+  document.querySelector("#submit").addEventListener("click", (e) => {
+    form_validation(e, textOfName, textOfSurname, textOfEmail, textOfMessage);
+  });
+  document.querySelector("#modal-form").addEventListener("submit", (e) => {
+    form_validation(e, textOfName, textOfSurname, textOfEmail, textOfMessage);
+  });
 };
 
 const modaleBehaviour = (photographers, photographerID) => {
