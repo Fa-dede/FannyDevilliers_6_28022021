@@ -87,6 +87,7 @@ body {
 #tag-list li:focus {
   background-color: #901C1C;
   color: #fff;
+  transition: 500ms;
 }
 
 #container-portrait {
@@ -350,6 +351,7 @@ body {
 .navigation-bar__tags:focus {
   background-color: #901C1C;
   color: #fff;
+  transition: 600ms;
 }
 
 #scroll-to-main-button {
@@ -820,10 +822,6 @@ figure .container-profile__picture:hover {
     display: block;
     width: 100%;
     padding: unset;
-  }
-
-  .container-profile ul {
-    padding-inline-start: unset;
   }
 
   .profile-insert .container-profile__tags {

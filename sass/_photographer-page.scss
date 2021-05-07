@@ -94,6 +94,7 @@ body {
   li:focus {
     background-color: $primary-color;
     color: #fff;
+    transition: 500ms;
   }
 }
 

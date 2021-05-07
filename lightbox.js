@@ -137,7 +137,7 @@ class lightbox {
     this.nextAndPrevPictureOnKeyUp(i, pictures, mediaContainer);
   }
 
-  nextAndPrevPictureOnKeyUp(i, pictures, mediaContainer) {
+  nextAndPrevPictureOnKeyUp(i, pictures, mediaContainer, e) {
     document.addEventListener("keyup", (e) => {
       if (e.key === "ArrowRight") {
         i++;

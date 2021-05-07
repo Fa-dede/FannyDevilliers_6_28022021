@@ -13,6 +13,7 @@
 .navigation-bar__tags:focus {
   background-color: $primary-color;
   color: #fff;
+  transition: 600ms;
 }
 
 #scroll-to-main-button {
