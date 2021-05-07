@@ -47,14 +47,14 @@ class lightbox {
         lightbox.style.display = "flex";
 
         let videoMarkup = `
-        <video controls alt preload loop autoplay  id="video-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].video}">vidéo non prise en charge par votre navigateur</video>
+        <video controls alt preload loop autoplay  id="video-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].video}" title = "${arrayOfPictures[i].alt}">vidéo non prise en charge par votre navigateur</video>
         `;
         let photoMarkup = `
-        <img id="image-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].image}">
+        <img id="image-clicked" class = 'selected-image' src = "./img/${photographerID}/${arrayOfPictures[i].image}" alt = "${arrayOfPictures[i].alt}">
         `;
         let domCarousel = `
         <div id = 'container-img-button-lightbox'>
-          <button class="lightbox__prev">Précédent</button>
+          <button class="lightbox__prev">Précédent</button> 
           <div id = 'photo-video-container'> </div>
           <button class="lightbox__next">Suivant</button>
           <button class="lightbox__close">Fermer</button>
