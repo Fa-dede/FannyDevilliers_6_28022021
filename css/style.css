@@ -629,8 +629,6 @@ figure .container-profile__picture:hover {
   #tag-list {
     position: absolute;
     margin-right: 20px;
-    max-width: 250px;
-    padding: unset;
   }
 
   .profile-insert .container-profile__button {
@@ -813,6 +811,7 @@ figure .container-profile__picture:hover {
     margin: unset;
     display: block;
     width: 100%;
+    padding: unset;
   }
 
   .profile-insert .container-profile__tags {

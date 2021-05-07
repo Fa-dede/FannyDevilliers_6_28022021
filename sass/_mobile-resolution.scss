@@ -92,9 +92,11 @@
   }
 
   #tag-list {
+    // position: unset;
     margin: unset;
     display: block;
     width: 100%;
+    padding: unset;
   }
   .profile-insert .container-profile__tags {
     grid-area: unset;
