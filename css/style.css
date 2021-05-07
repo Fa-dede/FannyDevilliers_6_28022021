@@ -167,6 +167,7 @@ body {
 .fa-chevron-down {
   position: relative;
   top: 18px;
+  right: 5px;
 }
 
 #chevron-up-filter {
