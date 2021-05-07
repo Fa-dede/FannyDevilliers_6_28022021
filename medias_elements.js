@@ -32,7 +32,7 @@ const addMedias = (filter, photographers, photographerID) => {
       if (media.video) {
         document.querySelector("#portfolio").innerHTML += `
         <figure class="photo">
-        <video tabIndex='0' preload loop class = 'photo-picture' src="./img/${media.photographerId}/${media.video}" title="${media.alt}">${media.description}</video>
+        <video tabIndex='0' preload loop class = 'photo-picture' src="./img/${media.photographerId}/${media.video}" title="${media.alt}">Vidéo non prise en charge par votre navigateur</video>
         <footer class="photo-footer">
                       <span class="photo-footer__title">${media.title}</span>
                       <span  class="photo-footer__likes"
