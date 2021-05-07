@@ -48,9 +48,6 @@ class PagesFactory {
           this.photographerID
         );
 
-        //filtre
-        // selectFilter(medias, filter, photographers, photographerID);
-
         //FACTORY DE PAGE AVEC MEDIAS
         new MediasFactory(this.medias, this.photographerID, this.photographers);
 
@@ -60,10 +57,15 @@ class PagesFactory {
   }
 
   createPage() {
-    if (this.path.includes("index.html")) {
-      this.createHomePage();
-    } else if (this.path.includes("photographer-page.html")) {
+    // if (this.path.includes("index.html")) {
+    //   this.createHomePage();
+    // } else if (this.path.includes("photographer-page.html")) {
+    //   this.createPhotographerPage();
+    // }
+    if (this.path.includes("photographer-page.html")) {
       this.createPhotographerPage();
+    } else {
+      this.createHomePage();
     }
   }
 }
