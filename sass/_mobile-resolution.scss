@@ -192,6 +192,10 @@
     width: 100%;
   }
 
+  #container-img-button-lightbox {
+    margin-left: 10px;
+  }
+
   #image-clicked,
   #video-clicked {
     width: inherit;
@@ -200,7 +204,7 @@
 
   .lightbox__close {
     margin: unset;
-    left: -20px;
+    left: -35px;
     transform: scale(0.5);
   }
 

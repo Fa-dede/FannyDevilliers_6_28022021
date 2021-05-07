@@ -242,18 +242,6 @@ body {
   margin-right: 67px;
 }
 
-#lightbox {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(196, 196, 196, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
 #container-modale {
   background-color: rgba(196, 196, 196, 0.4);
   height: 100%;
@@ -361,6 +349,25 @@ body {
   z-index: 9999;
 }
 
+#lightbox {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 196, 196, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-clicked,
+#video-clicked {
+  max-width: 100%;
+  margin-right: 10px;
+  text-align: center;
+}
+
 #container-img-button-lightbox {
   display: flex;
   z-index: inherit;
@@ -369,17 +376,19 @@ body {
 }
 
 #image-clicked {
-  max-height: 700px;
+  max-height: 900px;
   text-align: center;
   border-radius: 5px;
-  margin: 0 25px;
+  width: auto;
+  height: 100%;
 }
 
 #video-clicked {
   max-height: 700px;
   display: block;
   border-radius: 5px;
-  margin: 0 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .lightbox__next,
@@ -393,6 +402,7 @@ body {
 
 .lightbox__prev {
   transform: rotate(180deg);
+  margin-right: 10px;
 }
 
 .lightbox__close {
@@ -402,7 +412,7 @@ body {
   background: url("../img/cross.svg") no-repeat;
   margin: 5px;
   margin-top: 10px;
-  margin-left: -10px;
+  margin-left: 15px;
   height: 35px;
   width: 35px;
   text-indent: -8000px;
@@ -413,11 +423,12 @@ body {
 }
 
 #title-of-picture-selected {
-  font-size: 18px;
+  font-size: 30px;
+  font-weight: 400;
   color: #901C1C;
   margin: unset;
   margin-top: 10px;
-  margin-left: 75px;
+  margin-left: 60px;
 }
 
 body {
@@ -603,6 +614,8 @@ figure .container-profile__picture:hover {
   #tag-list {
     position: absolute;
     margin-right: 20px;
+    max-width: 250px;
+    padding: unset;
   }
 
   .profile-insert .container-profile__button {
@@ -645,6 +658,7 @@ figure .container-profile__picture:hover {
   #lightbox {
     overflow-x: hidden;
     height: 100%;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 940px) {
@@ -656,13 +670,13 @@ figure .container-profile__picture:hover {
   #container-img-button-lightbox {
     text-align: center;
     width: 100%;
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 940px) {
   #container-for-picture-selected {
     display: block;
     width: 100%;
-    margin-left: 20px;
   }
 }
 @media screen and (max-width: 940px) {
@@ -670,6 +684,7 @@ figure .container-profile__picture:hover {
 #video-clicked {
     max-width: 100%;
     margin: unset;
+    height: unset;
   }
 }
 @media screen and (max-width: 940px) and (max-height: 375px) {
@@ -684,11 +699,6 @@ figure .container-profile__picture:hover {
     font-weight: 400;
     font-size: 26px;
     margin-left: 40px;
-  }
-}
-@media screen and (max-width: 940px) {
-  .lightbox__close {
-    left: -20px;
   }
 }
 @media screen and (max-width: 940px) {
@@ -882,6 +892,10 @@ figure .container-profile__picture:hover {
     width: 100%;
   }
 
+  #container-img-button-lightbox {
+    margin-left: 10px;
+  }
+
   #image-clicked,
 #video-clicked {
     width: inherit;
@@ -890,7 +904,7 @@ figure .container-profile__picture:hover {
 
   .lightbox__close {
     margin: unset;
-    left: -20px;
+    left: -35px;
     transform: scale(0.5);
   }
 
