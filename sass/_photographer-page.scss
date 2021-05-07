@@ -83,6 +83,10 @@ body {
   }
 }
 
+.container-profile ul {
+  padding-inline-start: unset;
+}
+
 #tag-list {
   position: absolute;
   margin-left: -40px;

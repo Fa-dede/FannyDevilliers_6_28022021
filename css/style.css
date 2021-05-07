@@ -75,6 +75,10 @@ body {
   transition: 600ms;
 }
 
+.container-profile ul {
+  padding-inline-start: unset;
+}
+
 #tag-list {
   position: absolute;
   margin-left: -40px;
@@ -750,6 +754,10 @@ figure .container-profile__picture:hover {
     width: 100%;
   }
 
+  .navigation-bar ul {
+    padding: unset;
+  }
+
   #scroll-to-main-button {
     position: relative;
   }
@@ -812,6 +820,10 @@ figure .container-profile__picture:hover {
     display: block;
     width: 100%;
     padding: unset;
+  }
+
+  .container-profile ul {
+    padding-inline-start: unset;
   }
 
   .profile-insert .container-profile__tags {

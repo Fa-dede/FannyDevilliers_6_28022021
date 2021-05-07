@@ -31,6 +31,10 @@
     }
   }
 
+  .navigation-bar ul {
+    padding: unset;
+  }
+
   #scroll-to-main-button {
     position: relative;
     // right: -8000px;
@@ -98,6 +102,11 @@
     width: 100%;
     padding: unset;
   }
+
+  .container-profile ul {
+    padding-inline-start: unset;
+  }
+
   .profile-insert .container-profile__tags {
     grid-area: unset;
     margin-bottom: 50px;
