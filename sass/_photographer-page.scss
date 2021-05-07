@@ -112,16 +112,27 @@ body {
 .popularity-button {
   color: white;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   background-color: $primary-color;
   border-style: unset;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 13px;
-  width: 170px;
   min-height: 60px;
+  display: inline-block;
+  padding: unset;
+
   .fas {
     margin-left: 26px;
+  }
+  &__closed {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 16px;
+    padding-top: 5px;
+    width: 172px;
+    & #text-filter {
+      margin-left: -13px;
+    }
   }
   &__opened {
     position: absolute;
@@ -129,6 +140,7 @@ body {
     margin-left: 16px;
     z-index: 999;
     padding: 18px 11px;
+    width: 150px;
 
     display: none;
     ul {
@@ -154,6 +166,17 @@ body {
       border-top: solid 1px white;
     }
   }
+}
+
+#text-filter {
+  position: relative;
+  top: 15px;
+  left: 20px;
+}
+
+.fa-chevron-down {
+  position: relative;
+  top: 18px;
 }
 
 #chevron-up-filter {
