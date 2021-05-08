@@ -119,12 +119,14 @@
     width: 100%;
     // margin-left: 20px;
   }
+
   #image-clicked,
   #video-clicked {
     max-width: 100%;
     margin: unset;
     height: unset;
   }
+
   @media screen and (max-height: 375px) {
     #image-clicked,
     #video-clicked {

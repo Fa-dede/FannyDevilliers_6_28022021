@@ -33,6 +33,14 @@
   // margin: 0 25px;
 }
 
+@media screen and (max-height: 768px) {
+  #image-clicked,
+  #video-clicked {
+    max-height: 650px;
+    margin: auto;
+  }
+}
+
 #video-clicked {
   // max-height: 900px;
   display: block;

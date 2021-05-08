@@ -405,6 +405,13 @@ body {
   width: auto;
 }
 
+@media screen and (max-height: 768px) {
+  #image-clicked,
+#video-clicked {
+    max-height: 650px;
+    margin: auto;
+  }
+}
 #video-clicked {
   display: block;
   border-radius: 5px;
@@ -820,7 +827,7 @@ figure .container-profile__picture:hover {
   #tag-list {
     margin: unset;
     display: block;
-    width: 100%;
+    width: 350px;
     padding: unset;
   }
 
