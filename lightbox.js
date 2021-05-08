@@ -85,7 +85,7 @@ class lightbox {
       pictures[i].addEventListener("keyup", (e) => {
         if (e.key === "Enter" && lightboxIsAlreadyOpened == false) {
           openLightbox();
-          lightboxIsAlreadyOpened = true;
+          document.querySelector(".lightbox__prev").focus();
         }
       });
     }
@@ -163,7 +163,7 @@ class lightbox {
 
   closeCarouselOnKeyUp() {
     document.addEventListener("keyup", (e) => {
-      if (e.key === "Escape" || e.key === "Tab") {
+      if (e.key === "Escape") {
         this.lightbox.innerHTML = "";
         this.lightbox.style.display = "none";
       }
