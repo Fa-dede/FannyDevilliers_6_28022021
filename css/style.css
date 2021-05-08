@@ -76,7 +76,7 @@ body {
 }
 
 .container-profile ul {
-  padding-inline-start: unset;
+  padding-inline-start: 0;
 }
 
 #tag-list {
