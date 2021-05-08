@@ -896,6 +896,7 @@ figure .container-profile__picture:hover {
 
   #modale {
     margin-top: 40px;
+    padding-left: 20px;
     height: 100%;
     width: 90%;
     position: fixed;
